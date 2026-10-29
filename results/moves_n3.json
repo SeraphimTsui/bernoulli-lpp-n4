@@ -1,0 +1,501 @@
+{
+  "n": 3,
+  "paths": [
+    {
+      "word": "RRRUUU",
+      "runs": [
+        -3,
+        3
+      ]
+    },
+    {
+      "word": "RRURUU",
+      "runs": [
+        -2,
+        1,
+        -1,
+        2
+      ]
+    },
+    {
+      "word": "RRUURU",
+      "runs": [
+        -2,
+        2,
+        -1,
+        1
+      ]
+    },
+    {
+      "word": "RRUUUR",
+      "runs": [
+        -2,
+        3,
+        -1
+      ]
+    },
+    {
+      "word": "RURRUU",
+      "runs": [
+        -1,
+        1,
+        -2,
+        2
+      ]
+    },
+    {
+      "word": "RURURU",
+      "runs": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "word": "RURUUR",
+      "runs": [
+        -1,
+        1,
+        -1,
+        2,
+        -1
+      ]
+    },
+    {
+      "word": "RUURRU",
+      "runs": [
+        -1,
+        2,
+        -2,
+        1
+      ]
+    },
+    {
+      "word": "RUURUR",
+      "runs": [
+        -1,
+        2,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "word": "RUUURR",
+      "runs": [
+        -1,
+        3,
+        -2
+      ]
+    },
+    {
+      "word": "URRRUU",
+      "runs": [
+        1,
+        -3,
+        2
+      ]
+    },
+    {
+      "word": "URRURU",
+      "runs": [
+        1,
+        -2,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "word": "URRUUR",
+      "runs": [
+        1,
+        -2,
+        2,
+        -1
+      ]
+    },
+    {
+      "word": "URURRU",
+      "runs": [
+        1,
+        -1,
+        1,
+        -2,
+        1
+      ]
+    },
+    {
+      "word": "URURUR",
+      "runs": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "word": "URUURR",
+      "runs": [
+        1,
+        -1,
+        2,
+        -2
+      ]
+    },
+    {
+      "word": "UURRRU",
+      "runs": [
+        2,
+        -3,
+        1
+      ]
+    },
+    {
+      "word": "UURRUR",
+      "runs": [
+        2,
+        -2,
+        1,
+        -1
+      ]
+    },
+    {
+      "word": "UURURR",
+      "runs": [
+        2,
+        -1,
+        1,
+        -2
+      ]
+    },
+    {
+      "word": "UUURRR",
+      "runs": [
+        3,
+        -3
+      ]
+    }
+  ],
+  "witness_count": 24,
+  "edge_count": 24,
+  "edges": [
+    {
+      "source": "RRURUU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "RRURUU",
+          "target": "RRRUUU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "RRUURU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "RRUURU",
+          "target": "RRRUUU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "RRUUUR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "RRUUUR",
+          "target": "UUURRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "RURRUU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "RURRUU",
+          "target": "RRRUUU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "RURURU",
+      "target": "RRUURU",
+      "witnesses": [
+        {
+          "source": "RURURU",
+          "target": "RRUURU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "RURURU",
+      "target": "RURRUU",
+      "witnesses": [
+        {
+          "source": "RURURU",
+          "target": "RURRUU",
+          "kind": "bump",
+          "k": 4,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "RURUUR",
+      "target": "RRUUUR",
+      "witnesses": [
+        {
+          "source": "RURUUR",
+          "target": "RRUUUR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "RUURRU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "RUURRU",
+          "target": "RRRUUU",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3
+        }
+      ]
+    },
+    {
+      "source": "RUURRU",
+      "target": "UURRRU",
+      "witnesses": [
+        {
+          "source": "RUURRU",
+          "target": "UURRRU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "RUURUR",
+      "target": "RUUURR",
+      "witnesses": [
+        {
+          "source": "RUURUR",
+          "target": "RUUURR",
+          "kind": "bump",
+          "k": 3,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "RUURUR",
+      "target": "UURRUR",
+      "witnesses": [
+        {
+          "source": "RUURUR",
+          "target": "UURRUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "RUUURR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "RUUURR",
+          "target": "UUURRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "URRRUU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "URRRUU",
+          "target": "RRRUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "URRURU",
+      "target": "RRUURU",
+      "witnesses": [
+        {
+          "source": "URRURU",
+          "target": "RRUURU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "URRURU",
+      "target": "URRRUU",
+      "witnesses": [
+        {
+          "source": "URRURU",
+          "target": "URRRUU",
+          "kind": "bump",
+          "k": 3,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "URRUUR",
+      "target": "RRUUUR",
+      "witnesses": [
+        {
+          "source": "URRUUR",
+          "target": "RRUUUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "URRUUR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "URRUUR",
+          "target": "UUURRR",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3
+        }
+      ]
+    },
+    {
+      "source": "URURRU",
+      "target": "UURRRU",
+      "witnesses": [
+        {
+          "source": "URURRU",
+          "target": "UURRRU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "URURUR",
+      "target": "URUURR",
+      "witnesses": [
+        {
+          "source": "URURUR",
+          "target": "URUURR",
+          "kind": "bump",
+          "k": 4,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "URURUR",
+      "target": "UURRUR",
+      "witnesses": [
+        {
+          "source": "URURUR",
+          "target": "UURRUR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "URUURR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "URUURR",
+          "target": "UUURRR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "UURRRU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "UURRRU",
+          "target": "RRRUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "UURRUR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "UURRUR",
+          "target": "UUURRR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "UURURR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "UURURR",
+          "target": "UUURRR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    }
+  ]
+}

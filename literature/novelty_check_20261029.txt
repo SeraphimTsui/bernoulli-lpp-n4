@@ -1,0 +1,55 @@
+Pre-publication novelty review, 29 October 2026 (Asia/Shanghai)
+
+Assessment: no identical n=4 all-p certificate located in the bounded sources
+checked. Priority remains unestablished. Public archival as a finite verification
+is supportable; claims of first discovery or a general conjecture breakthrough
+are not supported. Correctness, priority and research significance are separate.
+
+Primary-source refresh
+https://arxiv.org/abs/2608.11378 still lists v2, 20 September 2026.
+https://arxiv.org/html/2608.11378v2 Section2 immediately before Theorem3
+proposes the operations; Theorem3/equation6 covers small positive p, while
+Section5 supplies p4=1/18400. Remark1 describes distribution-dependent path
+comparisons, not an all-p n4 certificate. This remains distinct from the v2
+AppendixC resolution of the previous moderate-deviation assumption.
+https://njimamath.github.io/Homepage/Publication/index.html lists this paper as
+submitted and links to arXiv, without an adjacent code/certificate link.
+https://people.math.wisc.edu/~smckeown2/ again returned403.
+
+Ten additional web queries in this publication turn:
+1. "2608.11378" "code"
+2. "Bernoulli" "unwinding" "n=4"
+3. "last passage" "bump" "all" monotonicity
+4. "On the most likely geodesic" "Bernoulli" exact
+5. "Bernoulli" "last-passage" "n=4" monotonicity
+6. "geodesic" "unwinding" certificate
+7. "last passage percolation" "fixed" "cardinality" path probability
+8. site:github.com "2608.11378"
+9. "Bernoulli" "bump" "unwind" geodesic
+10. "RUURUURR" percolation
+Results included the original paper, duplicate hosts, secondary AI reviews,
+and unrelated results. No matching primary finite certificate was found.
+Pith's review explicitly predates v2 and was not used for current theorem status.
+
+Additional citation-index attempts through the web tool:
+https://api.semanticscholar.org/graph/v1/paper/ARXIV:2608.11378?fields=title,citationCount,citations.title,citations.externalIds
+https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2608.11378
+Both inaccessible through this tool. This is incomplete forward-citation
+coverage, not evidence of zero citations. Prior audit in literature/audit.txt
+records15 earlier queries and the backward comparison with Alberts-Cator2021.
+
+Claim-by-claim assessment
+* Endpoint cancellation, exhaustive Bernoulli counting, lattice DP, Bernstein
+  positivity and degree elevation are standard elementary methods, not new methods.
+* The120-edge n4 all-p verification and188 closure pairs are explicit finite
+  results not supplied in the inspected source; exact prior occurrence unknown.
+* The fixed-three-free-ones difference -2/1771 is a finite counterexample to
+  a stronger conditional statement. It does not refute the source conjecture;
+  its prior occurrence is also unestablished.
+* This is potentially useful as a reproducible companion computation, with
+  limited independent scope. No inference about n>=5 or other weight laws.
+
+Publication authorization
+The user expressly requested GitHub publication after novelty checking in this
+turn. This supersedes the earlier local-only restriction for this GitHub deposit.
+It does not authorize journal/arXiv submission or contacting authors/editors.

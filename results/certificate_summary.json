@@ -1,0 +1,111 @@
+[
+  {
+    "n": 1,
+    "free_sites": 2,
+    "configurations": 4,
+    "paths": 2,
+    "move_witnesses": 0,
+    "edges": 0,
+    "strict_comparable_pairs": 0,
+    "coefficientwise_certified_edges": 0,
+    "minimum_delta2": null,
+    "negative_coefficient_edges": [],
+    "all_counts_independently_matched": true,
+    "all_layers_matched": true,
+    "maximal_paths": [
+      "RU",
+      "UR"
+    ],
+    "main_cpu_seconds": 0,
+    "replay_cpu_seconds": 0,
+    "all_edges_certified_after_one_elevation": true,
+    "all_move_witnesses_independently_matched": true,
+    "bump_edges": 0,
+    "unwind_edges": 0,
+    "boundary_unwind_edges": 0
+  },
+  {
+    "n": 2,
+    "free_sites": 7,
+    "configurations": 128,
+    "paths": 6,
+    "move_witnesses": 4,
+    "edges": 4,
+    "strict_comparable_pairs": 4,
+    "coefficientwise_certified_edges": 4,
+    "minimum_delta2": 2,
+    "negative_coefficient_edges": [],
+    "all_counts_independently_matched": true,
+    "all_layers_matched": true,
+    "maximal_paths": [
+      "RRUU",
+      "UURR"
+    ],
+    "main_cpu_seconds": 0,
+    "replay_cpu_seconds": 0,
+    "all_edges_certified_after_one_elevation": true,
+    "all_move_witnesses_independently_matched": true,
+    "bump_edges": 2,
+    "unwind_edges": 2,
+    "boundary_unwind_edges": 2
+  },
+  {
+    "n": 3,
+    "free_sites": 14,
+    "configurations": 16384,
+    "paths": 20,
+    "move_witnesses": 24,
+    "edges": 24,
+    "strict_comparable_pairs": 30,
+    "coefficientwise_certified_edges": 24,
+    "minimum_delta2": 2,
+    "negative_coefficient_edges": [],
+    "all_counts_independently_matched": true,
+    "all_layers_matched": true,
+    "maximal_paths": [
+      "RRRUUU",
+      "UUURRR"
+    ],
+    "main_cpu_seconds": 0,
+    "replay_cpu_seconds": 0,
+    "all_edges_certified_after_one_elevation": true,
+    "all_move_witnesses_independently_matched": true,
+    "bump_edges": 14,
+    "unwind_edges": 10,
+    "boundary_unwind_edges": 8
+  },
+  {
+    "n": 4,
+    "free_sites": 23,
+    "configurations": 8388608,
+    "paths": 70,
+    "move_witnesses": 120,
+    "edges": 120,
+    "strict_comparable_pairs": 188,
+    "coefficientwise_certified_edges": 118,
+    "minimum_delta2": 2,
+    "negative_coefficient_edges": [
+      [
+        "RUURUURR",
+        "UURRUURR"
+      ],
+      [
+        "URRURRUU",
+        "RRUURRUU"
+      ]
+    ],
+    "all_counts_independently_matched": true,
+    "all_layers_matched": true,
+    "maximal_paths": [
+      "RRRRUUUU",
+      "UUUURRRR"
+    ],
+    "main_cpu_seconds": 1.39,
+    "replay_cpu_seconds": 4.5,
+    "all_edges_certified_after_one_elevation": true,
+    "all_move_witnesses_independently_matched": true,
+    "bump_edges": 76,
+    "unwind_edges": 44,
+    "boundary_unwind_edges": 30
+  }
+]

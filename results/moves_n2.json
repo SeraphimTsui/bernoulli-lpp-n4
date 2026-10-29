@@ -1,0 +1,109 @@
+{
+  "n": 2,
+  "paths": [
+    {
+      "word": "RRUU",
+      "runs": [
+        -2,
+        2
+      ]
+    },
+    {
+      "word": "RURU",
+      "runs": [
+        -1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "word": "RUUR",
+      "runs": [
+        -1,
+        2,
+        -1
+      ]
+    },
+    {
+      "word": "URRU",
+      "runs": [
+        1,
+        -2,
+        1
+      ]
+    },
+    {
+      "word": "URUR",
+      "runs": [
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "word": "UURR",
+      "runs": [
+        2,
+        -2
+      ]
+    }
+  ],
+  "witness_count": 4,
+  "edge_count": 4,
+  "edges": [
+    {
+      "source": "RURU",
+      "target": "RRUU",
+      "witnesses": [
+        {
+          "source": "RURU",
+          "target": "RRUU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    },
+    {
+      "source": "RUUR",
+      "target": "UURR",
+      "witnesses": [
+        {
+          "source": "RUUR",
+          "target": "UURR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "URRU",
+      "target": "RRUU",
+      "witnesses": [
+        {
+          "source": "URRU",
+          "target": "RRUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ]
+    },
+    {
+      "source": "URUR",
+      "target": "UURR",
+      "witnesses": [
+        {
+          "source": "URUR",
+          "target": "UURR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "n": 1,
+  "paths": [
+    {
+      "word": "RU",
+      "runs": [
+        -1,
+        1
+      ]
+    },
+    {
+      "word": "UR",
+      "runs": [
+        1,
+        -1
+      ]
+    }
+  ],
+  "witness_count": 0,
+  "edge_count": 0,
+  "edges": []
+}

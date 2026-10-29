@@ -1,0 +1,500 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,longtable,array,geometry,microtype}
+\usepackage[hidelinks]{hyperref}
+\geometry{margin=26mm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\Ber}{\operatorname{Ber}}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\R}{\mathrm R}
+\newcommand{\U}{\mathrm U}
+\title{An exact all-parameter verification of the bump--unwind\\
+path order in Bernoulli last-passage percolation for $n=4$}
+\author{Unsigned research draft}
+\date{29 October 2026\\\small Research manuscript; not submitted to a journal; not peer reviewed}
+\begin{document}
+\maketitle
+\begin{abstract}
+We verify a finite specialization of the path-probability ordering proposed
+by McKeown and Nakajima for vertex last-passage percolation. On the
+$5\times5$ vertex grid with independent Bernoulli($p$) weights, every
+genuine nonidentity bump or unwinding move strictly increases the
+probability of membership in the full set of maximizing paths for
+$0<p<1$. Equality holds at $p=0,1$. The assertion covers all 120
+single-step comparisons and their 188 distinct ordered pairs in the
+transitive closure. Two independently written enumerators agree on every
+integer coefficient obtained from all $2^{23}$ free-vertex configurations.
+For 118 edges, positivity follows directly from their degree-23
+nonnegative coefficient arrays. The two remaining edges have a negative
+coefficient, but a single exact degree elevation yields nonnegative
+coefficients for every edge. The exceptional edges also disprove a
+stronger comparison conditional on exactly three occupied free vertices.
+We document boundary conventions, complete certificates, small-grid hand
+checks, and reproducibility. The result is a modest computer-assisted
+finite verification; priority and independent research significance are
+not established.
+\end{abstract}
+
+\section{Scope and relation to prior work}
+The question of which directed paths have greatest probability of being
+maximal has a geometric history; see Alberts and Cator \cite[Section~8]{AC}
+for modal-path and path-order questions. McKeown and Nakajima \cite{MN}
+give two concrete path transformations and propose an increase of
+geodesic-membership probabilities. Their Theorem~3, equation~(6), proves
+the Bernoulli comparison for sufficiently small positive $p$, with
+strictness for distinct related paths. The choice in their Section~5 is
+\[
+p_n=\min\left\{\frac1{2N},\frac1{8\binom N3}\right\},
+\qquad N=(n+1)^2,
+\]
+which gives $p_4=1/18400$. Our computation covers the whole parameter
+interval for the fixed size $n=4$, and checks $n\leq3$ as controls.
+It neither proves their general conjecture nor concerns the separate
+moderate-deviation issue resolved in their version~2.
+
+We use version~2, dated 20 September 2026; the version record was checked
+on 29 October 2026. A bounded search of 15 query strings, author materials,
+and relevant backward references did not locate the same finite
+certificate. Forward citation coverage is incomplete: Google Scholar,
+ADS, and Semantic Scholar could not be fully inspected, and one author's
+homepage was inaccessible. Thus no priority assertion follows. The
+full query log, URLs, access failures, and distinctions are in
+\path{literature/audit.txt} and \path{literature/sources.json}.
+This unsigned manuscript is prepared for public archival on GitHub.
+It has not been submitted to a journal or sent to the cited authors.
+A publication-stage refresh with ten additional queries is recorded in
+\path{literature/novelty_check_20261029.txt}; priority remains unestablished.
+
+\section{Model and exact meaning of the path order}
+Let $V_n=\{0,\ldots,n\}^2$ and let $\Gamma_n$ consist of the $\binom{2n}n$
+words containing $n$ letters $\R$ and $n$ letters $\U$. A word defines the
+corresponding up/right path from $(0,0)$ to $(n,n)$.
+For independent weights $\omega_v\sim\Ber(p)$ put
+\[
+L(\gamma)=\sum_{v\in\gamma}\omega_v,\qquad
+L_n=\max_{\eta\in\Gamma_n}L(\eta),\qquad
+F_\gamma(p)=\Prob_p\{L(\gamma)=L_n\}.
+\]
+Every tied maximizing path is counted. In particular, these probabilities
+do not in general sum to one; we do not select one path from a tie.
+
+\subsection{Run notation and bump moves}
+Write a word as its maximal constant-letter runs with signed lengths
+$a=(a_1,\ldots,a_r)$, positive for $\U$ and negative for $\R$.
+The nonzero signs alternate, the positive lengths sum to $n$, and the
+absolute negative lengths sum to $n$. Let $s_i=\sum_{j=1}^i a_j$ and
+$a_0=s_0=0$. Thus $s_i$ is the vertical coordinate minus the horizontal
+coordinate at the end of run $i$.
+
+A bump has $2\leq k\leq r-2$ and satisfies either
+$s_k\geq0$, $a_k<0$, or $s_k\leq0$, $a_k>0$. Its replacement is
+\[
+(a_1,\ldots,a_{k-2},\
+ a_{k-1}+a_{k+1},\ a_k+a_{k+2},\
+ a_{k+3},\ldots,a_r).
+\]
+Equivalently, reverse the order of the letters between corner times
+$t_{k-1}$ and $t_{k+1}$, where
+$t_i=\sum_{j=1}^i|a_j|$. The blocks on either side merge with the resulting
+blocks, reducing the number of runs by two.
+The weak inequalities permit diagonal contact. The putative index
+$k=1$ cannot satisfy the sign condition because $s_1=a_1$.
+
+\subsection{Unwinding moves and degenerate indices}
+A genuine unwind has $0\leq l$, $l+2\leq k\leq r-1$, and a sign
+$\varepsilon\in\{-1,1\}$ such that
+\[
+ \varepsilon s_k>0,\qquad
+ \varepsilon s_i<0\quad(l<i<k),\qquad
+ l=0\ \text{or}\ \varepsilon s_l>0.
+\]
+Reverse the order of all letters between times $t_l$ and $t_k$, keeping
+each letter's direction. For $l\geq1$ the resulting signed runs are
+\[
+(a_1,\ldots,a_{l-1},\
+a_l+a_k,\ a_{k-1},\ldots,a_{l+2},\
+a_{k+1}+a_{l+1},\ a_{k+2},\ldots,a_r).
+\]
+For $l=0$, the prefix is absent and the first displayed merged term
+is simply $a_k$. This case reverses an initial segment, and decreases
+the number of runs by one; an interior unwind decreases it by two.
+
+These conventions explicitly reconcile the run display with the
+geometric operations in \cite[Section~2, Figures~3--4]{MN}. The strict
+interior signs express an actual excursion to the other side of the
+diagonal. If one allows $k=l+1$ in the prose inequality, its interior
+condition is vacuous; the geometric segment then consists of a single
+constant-letter run and its reversal is an identity. The merged-run
+display must not be applied with overlapping indices in that case.
+It is excluded from our nonidentity move list. This is a stated
+interpretation of the genuine geometric moves, not a claim about a
+literal overlapping-index substitution. The source's assertion that
+$n=1$ has no nontrivial moves and its Lemma~9 strict two-dot gain agree
+with this interpretation.
+
+The initial boundary $l=0$ is expressly retained. There is no extra
+terminal boundary: $s_r=0$ makes $k=r$ fail the strict condition, and
+$a_{k+1}$ consequently exists. Diagonal contacts at interior corners
+fail the strict unwind condition. No additional moves are introduced
+by reversing a whole path. Diagonal reflection, on the other hand,
+is exactly the sign symmetry already included in the definitions.
+An independent implementation operates on corner coordinates and word
+segments rather than on the merged-run formulas.
+
+Write $\gamma\prec\pi$ when $\pi$ is reachable from $\gamma$ by one or
+more such moves. The run count strictly decreases, so this is a strict
+partial order. The identity belongs only to its reflexive closure.
+
+\section{Finite theorem}
+\begin{theorem}[Computer-assisted finite comparison]\label{thm:main}
+For $1\leq n\leq4$, and every genuine nonidentity single-step move
+$\gamma\longrightarrow\pi$ defined above,
+\[
+ F_\pi(p)>F_\gamma(p)\qquad(0<p<1).
+\]
+The same strict inequality holds if $\gamma\prec\pi$.
+For $p=0$ or $p=1$, every path is maximizing, so $F_\gamma(p)=1$.
+For $n=4$, each single-step difference satisfies the explicit bound
+\[
+ F_\pi(p)-F_\gamma(p)\ \geq\ 2p^2(1-p)^{22}
+ \qquad(0\leq p\leq1).
+\]
+\end{theorem}
+\begin{corollary}
+For $n=4$ and $0<p<1$, the only modal paths are
+$\R^4\U^4$ and $\U^4\R^4$. Their probabilities are equal, and exceed
+that of each of the other 68 paths.
+\end{corollary}
+The corner statement follows because every noncorner reaches a corner
+and the two corners have equal probability under diagonal reflection.
+This does not compare every incomparable pair in a total order.
+
+\section{Exact reduction and sign certificates}
+\begin{lemma}[Removal of common endpoints]\label{lem:endpoints}
+Setting the weights at $(0,0)$ and $(n,n)$ to zero preserves the maximizing
+set for every configuration.
+\end{lemma}
+\begin{proof}
+Each path contains both vertices, so the same sum of two weights is
+subtracted from every score. All equalities and inequalities are preserved.
+\end{proof}
+
+Put $W_n=V_n\setminus\{(0,0),(n,n)\}$ and $m=|W_n|=(n+1)^2-2$.
+For $S\subseteq W_n$ define
+\[
+ M(S)=\max_{\eta\in\Gamma_n}|S\cap\eta|,\quad
+ C_\gamma[k]=
+ \#\{S\subseteq W_n:|S|=k,\ |S\cap\gamma|=M(S)\}.
+\]
+Every set $S$ is equally likely within its cardinality layer, and its
+unconditional probability is $p^k(1-p)^{m-k}$. Hence, with $q=1-p$,
+\begin{equation}\label{eq:raw}
+ F_\gamma(p)=\sum_{k=0}^m C_\gamma[k]p^kq^{m-k}.
+\end{equation}
+The $C_\gamma[k]$ are raw configuration counts. There is no extra
+$\binom mk$ multiplier. If one uses the normalized Bernstein basis
+$\binom mk p^kq^{m-k}$, its coefficient is $C_\gamma[k]/\binom mk$.
+
+For an edge write $d_k=C_\pi[k]-C_\gamma[k]$. When all $d_k\geq0$ and
+some $d_k>0$, equation~\eqref{eq:raw} gives strict positivity for
+$0<p<1$. A negative $d_k$ does not by itself refute the comparison.
+
+\begin{lemma}[Exact degree elevation]\label{lem:elevation}
+Set $d_{-1}=d_{m+1}=0$ and $e_k=d_k+d_{k-1}$ for $0\leq k\leq m+1$.
+Then
+\[
+ \sum_{k=0}^m d_kp^kq^{m-k}
+ =\sum_{k=0}^{m+1}e_kp^kq^{m+1-k}.
+\]
+If all $e_k\geq0$ and $e_2\geq2$, the difference is at least
+$2p^2q^{m-1}$.
+\end{lemma}
+\begin{proof}
+Multiply the first sum by $p+q=1$ and collect terms of the same
+degree. All basis terms are nonnegative on $[0,1]$ and positive in
+its interior, proving the claimed bound.
+\end{proof}
+
+For all 120 edges at $n=4$, the saved arrays satisfy $e_k\geq0$ and
+$e_2\geq2$. The checks are exact integer comparisons. The same condition
+holds for every edge at $n=2,3$; $n=1$ has no edges.
+No root solver, floating-point sign test, or numerical grid in $p$
+is used.
+
+\subsection{The two exceptional degree-23 arrays}
+The only edges failing raw coefficientwise positivity at $n=4$ are
+\[
+ \R\U\U\R\U\U\R\R\longrightarrow\U\U\R\R\U\U\R\R
+ \quad\text{and its diagonal reflection.}
+\]
+The first word has runs $(-1,2,-1,2,-2)$ and heights
+$s_1=-1,s_2=1$. Thus $l=0,k=2$ is legal: reversing the prefix
+$\R\U\U$ gives $\U\U\R$. Its destination has runs $(2,-2,2,-2)$.
+Both edges have the identical difference array in Table~\ref{tab:exception}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{r r r @{\qquad} r r r}
+\toprule
+$k$&$d_k$&$e_k$&$k$&$d_k$&$e_k$\\
+\midrule
+0&0&0&13&2596&6225\\
+1&0&0&14&1347&3943\\
+2&2&2&15&536&1883\\
+3&-2&0&16&204&740\\
+4&40&38&17&94&298\\
+5&67&107&18&44&138\\
+6&328&395&19&12&56\\
+7&864&1192&20&1&13\\
+8&1530&2394&21&0&1\\
+9&2832&4362&22&0&0\\
+10&3783&6615&23&0&0\\
+11&3948&7731&24&0$^\dagger$&0\\
+12&3629&7577&&&\\
+\bottomrule
+\end{tabular}
+\caption{Exceptional edge coefficients. The left representation has degree
+23 and the elevated representation degree 24.
+$^\dagger d_{24}=0$ is only a padding convention.}\label{tab:exception}
+\end{table}
+Here $d_3=-2$ is offset exactly by $d_2=2$ upon elevation; the next
+coefficient becomes $e_4=38$. As a second elementary sign check, the
+first three nonzero-degree terms can be grouped as
+\[
+p^2q^{19}(2q^2-2pq+40p^2)
+=\tfrac12p^2q^{19}\bigl((2q-p)^2+79p^2\bigr),
+\]
+and every remaining nonzero term is positive in the interior.
+
+\begin{proposition}[Failure of a stronger fixed-cardinality comparison]
+Conditioning on exactly three occupied vertices in $W_4$, the preceding
+legal unwind changes geodesic-membership probability by $-2/1771$.
+Thus monotonicity in each fixed-cardinality ensemble is false.
+\end{proposition}
+\begin{proof}
+The conditional difference equals $d_3/\binom{23}3=-2/1771$.
+This conditional model is different from the independent Bernoulli model;
+the proposition is not a counterexample to Theorem~\ref{thm:main}.
+\end{proof}
+
+\section{Complete enumeration and verification}
+\subsection{Two algorithms}
+Free vertices are indexed in increasing $y$, then increasing $x$,
+omitting the two endpoints. Paths are indexed by their complete words
+in lexicographic order $\R<\U$.
+
+Implementation A, \path{src/count_masks.cjs}, constructs a bit mask
+$B_\gamma$ for each path's free vertices. For each integer
+$0\leq b<2^m$, it computes every score
+$\operatorname{popcount}(b\mathbin{\&}B_\gamma)$, takes their maximum,
+and increments the count of \emph{every} path attaining it in the
+$\operatorname{popcount}(b)$ column. Its population count uses fixed
+integer bit operations.
+
+Implementation B, \path{src/replay_dp.js}, independently generates paths
+as lists of grid indices and unpacks each configuration into individual
+cell weights. It obtains the global maximum by the lattice recurrence
+\[
+ D(x,y)=\omega_{x,y}+\max\{D(x-1,y),D(x,y-1)\},
+\]
+using only the available predecessor on each boundary and
+$D(0,0)=0$. Every path's weights are then added directly and compared
+with $D(n,n)$. This implementation was written before inspecting A's
+scoring code; it neither imports A's masks nor obtains the maximum from
+its path scores. The shared items are the mathematical model and
+indexing specification.
+
+\begin{lemma}[Enumeration correctness]
+Each algorithm computes the integers in equation~\eqref{eq:raw}.
+\end{lemma}
+\begin{proof}
+The mask loop is a bijection from the integers $0,\ldots,2^m-1$ to
+subsets of the free vertices. Recursive word generation lists every
+legal path once. In A, intersection population counts equal occupied
+path-vertex counts, and maximization is over the complete path set.
+In B, induction on $x+y$ proves that $D(x,y)$ is the greatest path
+weight to $(x,y)$; a path's separately summed score equals $D(n,n)$
+if and only if it is maximal. Both algorithms increment precisely
+the required integer once for every successful pair $(S,\gamma)$.
+\end{proof}
+
+At $n=4$ the maximum score is seven, and every count is at most
+$2^{23}$. The unsigned 8-bit scores and 32-bit counters are sufficient.
+All relevant JavaScript integers are exact. In A the largest product
+inside the population-count reduction is below $2^{53}$, so the
+floating-number representation does not affect its integer result.
+No probabilities are accumulated in floating point.
+
+\subsection{Coverage and invariants}
+\begin{table}[ht]
+\centering
+\begin{tabular}{r r r r r r r}
+\toprule
+$n$&$m$&Configurations&Paths&Bumps&Unwinds&Closure pairs\\
+\midrule
+1&2&4&2&0&0&0\\
+2&7&128&6&2&2&4\\
+3&14&16,384&20&14&10&30\\
+4&23&8,388,608&70&76&44&188\\
+\bottomrule
+\end{tabular}
+\caption{Complete coverage. Closure pairs exclude identities. At $n=4$,
+30 of the 44 unwinds use $l=0$. Each listed operation has a distinct
+ordered source--target pair.}
+\end{table}
+Both count implementations agree on all $6+48+300+1680=2034$ entries
+for $n=1,2,3,4$. They separately check the cardinality layers against
+$\binom mk$, the endpoint columns $C_\gamma[0]=C_\gamma[m]=1$,
+and $0\leq C_\gamma[k]\leq\binom mk$. Counts agree under both diagonal
+reflection and central rotation with reversal of traversal (word reversal).
+These symmetries are checks on probabilities, not a license to add moves.
+
+The signed-run and geometric word implementations agree on every
+operation witness $(\gamma,\pi,\mathrm{kind},l,k)$, not just on edge
+totals. Every resulting word is valid and its run count decreases by
+the stated amount. Their complete transitive closures agree, and the
+only sinks are the two corner paths.
+
+A further check directly counts incomparable vertex pairs. Let
+\[
+ I(\gamma)=
+ \#\{(v,w):v\in\gamma,\ w\in W_n\setminus\gamma,\
+                   (v_x-w_x)(v_y-w_y)<0\}.
+\]
+Then
+\[
+ C_\gamma[1]=2n-1,\qquad
+ C_\gamma[2]=\binom{2n-1}{2}+I(\gamma).
+\]
+Indeed, either both occupied sites lie on $\gamma$, or exactly one
+does and the two sites cannot lie together on any directed path.
+If neither lies on $\gamma$, that path cannot be maximizing.
+The incomparable-pair calculation matches every coefficient and yields
+$I(\pi)-I(\gamma)>0$ on every edge. This independently checks the
+two-dot strictness underlying \cite[Lemma~9]{MN} without relying on
+its area calculation.
+
+\subsection{Small cases by hand}
+For $n=1$ each path has one nonendpoint weight, and success is the event
+$X\geq Y$. Its probability is $1-p+p^2$, with raw count row $(1,1,1)$.
+There is no genuine move.
+
+For $n=2$, label the seven free weights
+\[
+a=\omega_{1,0},\ b=\omega_{2,0},\ c=\omega_{0,1},\
+d=\omega_{1,1},\ e=\omega_{2,1},\ f=\omega_{0,2},\ g=\omega_{1,2}.
+\]
+The path scores in order
+$\R\R\U\U,\R\U\R\U,\R\U\U\R,\U\R\R\U,\U\R\U\R,\U\U\R\R$
+are
+\[
+ a+b+e,\quad a+d+e,\quad a+d+g,\quad
+ c+d+e,\quad c+d+g,\quad c+f+g.
+\]
+Let $G_\gamma(t)=\sum_k C_\gamma[k]t^k$,
+$Q=1+t+t^2$, and $E=1+t^2$. The three symmetry classes have
+\begin{align*}
+G_{\R\U\R\U}&=(1+t)Q^3-tE^2,\\
+G_{\R\U\U\R}&=t(1+t)^2Q^2+(1+t+2t^2)^2,\\
+G_{\R\R\U\U}&=(1+t)(1+t^2)Q^2-tE^2+tH,\\
+H&=1+5t+7t^2+9t^3+3t^4+t^5.
+\end{align*}
+For the first class, the score comparisons require $d\geq b$,
+$e\geq g$, and $a\geq c$. The sole remaining failure has
+$d=b=0$, $a=c$, $e=g$, $f=1$, giving the subtraction $tE^2$.
+For the second, $a\geq c$, $g\geq e$, and
+$d+(g-e)\geq b$, $d+(a-c)\geq f$ suffice; splitting on $d$ gives
+the two summands. For the corner, split the constraint $b\geq d$
+into $(b,d)=(0,0),(1,1),(1,0)$. The first two cases give the first
+two terms combined above. In the third case the remaining comparison
+is $c+f+g\leq a+e+1$, yielding
+\[
+H=\sum_{A=0}^2\binom2A t^A
+       \sum_{B=0}^{\min(3,A+1)}\binom3B t^B.
+\]
+Expansion gives
+\[
+\begin{array}{c|rrrrrrrr}
+\gamma\backslash k&0&1&2&3&4&5&6&7\\\hline
+\R\R\U\U&1&3&11&13&17&8&4&1\\
+\R\U\R\U&1&3&9&11&13&8&4&1\\
+\R\U\U\R&1&3&9&12&14&8&4&1
+\end{array}
+\]
+and symmetry gives the remaining rows. The differences from the corner
+are $2t^2+2t^3+4t^4$ and $2t^2+t^3+3t^4$. Thus all 48 small-case
+entries have a separate algebraic check.
+
+\subsection{Completion of the finite proof}
+The complete counts, exact move coverage, and sign certificates establish
+every single-step assertion of Theorem~\ref{thm:main} by
+Lemmas~\ref{lem:endpoints} and \ref{lem:elevation}. Summing the positive
+single-step differences along a nonempty chain establishes the strict
+partial-order assertion. Direct evaluation of the deterministic all-zero
+and all-one environments gives the endpoint equalities.
+
+The finite data, rather than an unreported search, are part of this
+computer-assisted proof. The independent replay is complete, not
+statistical. The proof still relies on correct execution of the supplied
+programs and ordinary arithmetic implementations; it is not a
+proof-assistant formalization or a human peer-reviewed theorem.
+
+\section{Reproducibility, audit, and limitations}
+The project includes:
+\begin{itemize}
+\item \path{results/counts_n4.csv} and the corresponding JSON: all
+70 count rows, with 24 entries each;
+\item \path{results/moves_n4.json}: all 120 legal operations and witnesses;
+\item \path{results/certificates_n4.json}: every difference array, its
+degree-24 array, and all 188 strict closure pairs;
+\item independent count and move outputs, and reports in \path{review/};
+\item \path{src/certify.py}, \path{reproduce.py}, and
+\path{README.md}: exact validation and complete regeneration;
+\item \path{literature/}: source/version records and bounded search log;
+\item \path{SHA256SUMS.txt}: integrity hashes for retained artifacts.
+\end{itemize}
+No nonstandard Python package is required. The count implementations
+use Node.js; the checker uses Python's standard library.
+The initial $n=4$ runs used Node v24.19.0 on Windows x64:
+A took 1.377 wall seconds and 1.390 CPU seconds; B took 4.563 wall seconds
+and 4.500 CPU seconds, with approximately 40.6 MiB peak resident memory
+for B. Short benchmarks preceded full runs. The initial full runs used
+5.890 CPU seconds combined, well inside the 7200-second limit.
+The supplied portable reproduction script runs workers sequentially and rejects
+$n>4$. Timings are observations on this machine, not portable guarantees.
+Rerun timing receipts have different hashes; deterministic count arrays
+and certificate arrays are the mathematical comparison targets.
+
+Independent AI agents audited move definitions, rebuilt the full count
+table, checked the two exceptional sign certificates, and reviewed the
+manuscript. These activities are distinct from human expert review.
+There is no conclusion for $n\geq5$, no assertion about other weight
+laws, and no claim that the finite computation is new globally or
+has standalone publication significance. The exceptional negative
+fixed-cardinality coefficient explains why positivity of every original
+coefficient is too strong a proposed general proof strategy; one degree
+elevation happens to suffice here.
+
+\begin{thebibliography}{9}
+\bibitem{MN}
+S. McKeown and S. Nakajima,
+\emph{On the most likely geodesic in last passage percolation},
+arXiv:2608.11378v2, 20 September 2026.
+\url{https://arxiv.org/html/2608.11378v2}.
+Version record: \url{https://arxiv.org/abs/2608.11378}.
+Accessed 29 October 2026.
+
+\bibitem{AC}
+T. Alberts and E. Cator,
+\emph{On the Passage Time Geometry of the Last Passage Percolation Problem},
+ALEA, Latin American Journal of Probability and Mathematical Statistics
+\textbf{18} (2021), 211--247.
+doi:10.30757/ALEA.v18-10.
+\url{https://alea.impa.br/articles/v18/18-10.pdf}.
+Relevant comparison: Section~8, pp.~242--244.
+Accessed 29 October 2026.
+\end{thebibliography}
+\end{document}

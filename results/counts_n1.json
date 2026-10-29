@@ -1,0 +1,46 @@
+{
+  "implementation": "A: direct path masks and SWAR population counts",
+  "n": 1,
+  "m": 2,
+  "sites": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "path_order": "R before U lexicographic",
+  "configurations": 4,
+  "complete": true,
+  "layer_totals": [
+    1,
+    2,
+    1
+  ],
+  "counts": {
+    "RU": [
+      1,
+      1,
+      1
+    ],
+    "UR": [
+      1,
+      1,
+      1
+    ]
+  },
+  "path_masks": {
+    "RU": 1,
+    "UR": 2
+  },
+  "runtime": {
+    "wall_seconds": 0,
+    "cpu_seconds": 0,
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  }
+}

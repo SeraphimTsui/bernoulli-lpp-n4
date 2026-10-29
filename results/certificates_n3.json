@@ -1,0 +1,1633 @@
+{
+  "summary": {
+    "n": 3,
+    "free_sites": 14,
+    "configurations": 16384,
+    "paths": 20,
+    "move_witnesses": 24,
+    "edges": 24,
+    "strict_comparable_pairs": 30,
+    "coefficientwise_certified_edges": 24,
+    "minimum_delta2": 2,
+    "negative_coefficient_edges": [],
+    "all_counts_independently_matched": true,
+    "all_layers_matched": true,
+    "maximal_paths": [
+      "RRRUUU",
+      "UUURRR"
+    ],
+    "main_cpu_seconds": 0,
+    "replay_cpu_seconds": 0,
+    "all_edges_certified_after_one_elevation": true,
+    "all_move_witnesses_independently_matched": true,
+    "bump_edges": 14,
+    "unwind_edges": 10,
+    "boundary_unwind_edges": 8
+  },
+  "edges": [
+    {
+      "source": "RRURUU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "RRURUU",
+          "target": "RRRUUU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        4,
+        14,
+        54,
+        100,
+        146,
+        168,
+        116,
+        74,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        4,
+        18,
+        68,
+        154,
+        246,
+        314,
+        284,
+        190,
+        100,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RRUURU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "RRUURU",
+          "target": "RRRUUU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        6,
+        16,
+        71,
+        113,
+        187,
+        203,
+        148,
+        101,
+        36,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        6,
+        22,
+        87,
+        184,
+        300,
+        390,
+        351,
+        249,
+        137,
+        37,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RRUUUR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "RRUUUR",
+          "target": "UUURRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        6,
+        12,
+        60,
+        86,
+        141,
+        157,
+        105,
+        74,
+        29,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        6,
+        18,
+        72,
+        146,
+        227,
+        298,
+        262,
+        179,
+        103,
+        30,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RURRUU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "RURRUU",
+          "target": "RRRUUU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        6,
+        16,
+        71,
+        113,
+        187,
+        203,
+        148,
+        101,
+        36,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        6,
+        22,
+        87,
+        184,
+        300,
+        390,
+        351,
+        249,
+        137,
+        37,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RURURU",
+      "target": "RRUURU",
+      "witnesses": [
+        {
+          "source": "RURURU",
+          "target": "RRUURU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        4,
+        24,
+        39,
+        72,
+        78,
+        59,
+        36,
+        10,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        6,
+        28,
+        63,
+        111,
+        150,
+        137,
+        95,
+        46,
+        11,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RURURU",
+      "target": "RURRUU",
+      "witnesses": [
+        {
+          "source": "RURURU",
+          "target": "RURRUU",
+          "kind": "bump",
+          "k": 4,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        4,
+        24,
+        39,
+        72,
+        78,
+        59,
+        36,
+        10,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        6,
+        28,
+        63,
+        111,
+        150,
+        137,
+        95,
+        46,
+        11,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RURUUR",
+      "target": "RRUUUR",
+      "witnesses": [
+        {
+          "source": "RURUUR",
+          "target": "RRUUUR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        6,
+        31,
+        53,
+        94,
+        99,
+        80,
+        50,
+        14,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        8,
+        37,
+        84,
+        147,
+        193,
+        179,
+        130,
+        64,
+        15,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RUURRU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "RUURRU",
+          "target": "RRRUUU",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        8,
+        18,
+        89,
+        132,
+        223,
+        241,
+        175,
+        123,
+        44,
+        2,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        8,
+        26,
+        107,
+        221,
+        355,
+        464,
+        416,
+        298,
+        167,
+        46,
+        2,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RUURRU",
+      "target": "UURRRU",
+      "witnesses": [
+        {
+          "source": "RUURRU",
+          "target": "UURRRU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        6,
+        29,
+        46,
+        82,
+        84,
+        70,
+        49,
+        15,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        8,
+        35,
+        75,
+        128,
+        166,
+        154,
+        119,
+        64,
+        16,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RUURUR",
+      "target": "RUUURR",
+      "witnesses": [
+        {
+          "source": "RUURUR",
+          "target": "RUUURR",
+          "kind": "bump",
+          "k": 3,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        6,
+        31,
+        53,
+        94,
+        99,
+        80,
+        50,
+        14,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        8,
+        37,
+        84,
+        147,
+        193,
+        179,
+        130,
+        64,
+        15,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RUURUR",
+      "target": "UURRUR",
+      "witnesses": [
+        {
+          "source": "RUURUR",
+          "target": "UURRUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        2,
+        20,
+        26,
+        48,
+        53,
+        37,
+        23,
+        7,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        4,
+        22,
+        46,
+        74,
+        101,
+        90,
+        60,
+        30,
+        8,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "RUUURR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "RUUURR",
+          "target": "UUURRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        6,
+        12,
+        60,
+        86,
+        141,
+        157,
+        105,
+        74,
+        29,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        6,
+        18,
+        72,
+        146,
+        227,
+        298,
+        262,
+        179,
+        103,
+        30,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "URRRUU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "URRRUU",
+          "target": "RRRUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        6,
+        12,
+        60,
+        86,
+        141,
+        157,
+        105,
+        74,
+        29,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        6,
+        18,
+        72,
+        146,
+        227,
+        298,
+        262,
+        179,
+        103,
+        30,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "URRURU",
+      "target": "RRUURU",
+      "witnesses": [
+        {
+          "source": "URRURU",
+          "target": "RRUURU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        2,
+        20,
+        26,
+        48,
+        53,
+        37,
+        23,
+        7,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        4,
+        22,
+        46,
+        74,
+        101,
+        90,
+        60,
+        30,
+        8,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "URRURU",
+      "target": "URRRUU",
+      "witnesses": [
+        {
+          "source": "URRURU",
+          "target": "URRRUU",
+          "kind": "bump",
+          "k": 3,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        6,
+        31,
+        53,
+        94,
+        99,
+        80,
+        50,
+        14,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        8,
+        37,
+        84,
+        147,
+        193,
+        179,
+        130,
+        64,
+        15,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "URRUUR",
+      "target": "RRUUUR",
+      "witnesses": [
+        {
+          "source": "URRUUR",
+          "target": "RRUUUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        6,
+        29,
+        46,
+        82,
+        84,
+        70,
+        49,
+        15,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        8,
+        35,
+        75,
+        128,
+        166,
+        154,
+        119,
+        64,
+        16,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "URRUUR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "URRUUR",
+          "target": "UUURRR",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        8,
+        18,
+        89,
+        132,
+        223,
+        241,
+        175,
+        123,
+        44,
+        2,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        8,
+        26,
+        107,
+        221,
+        355,
+        464,
+        416,
+        298,
+        167,
+        46,
+        2,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "URURRU",
+      "target": "UURRRU",
+      "witnesses": [
+        {
+          "source": "URURRU",
+          "target": "UURRRU",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        6,
+        31,
+        53,
+        94,
+        99,
+        80,
+        50,
+        14,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        8,
+        37,
+        84,
+        147,
+        193,
+        179,
+        130,
+        64,
+        15,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "URURUR",
+      "target": "URUURR",
+      "witnesses": [
+        {
+          "source": "URURUR",
+          "target": "URUURR",
+          "kind": "bump",
+          "k": 4,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        4,
+        24,
+        39,
+        72,
+        78,
+        59,
+        36,
+        10,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        6,
+        28,
+        63,
+        111,
+        150,
+        137,
+        95,
+        46,
+        11,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "URURUR",
+      "target": "UURRUR",
+      "witnesses": [
+        {
+          "source": "URURUR",
+          "target": "UURRUR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        2,
+        4,
+        24,
+        39,
+        72,
+        78,
+        59,
+        36,
+        10,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        2,
+        6,
+        28,
+        63,
+        111,
+        150,
+        137,
+        95,
+        46,
+        11,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "URUURR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "URUURR",
+          "target": "UUURRR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        6,
+        16,
+        71,
+        113,
+        187,
+        203,
+        148,
+        101,
+        36,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        6,
+        22,
+        87,
+        184,
+        300,
+        390,
+        351,
+        249,
+        137,
+        37,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "UURRRU",
+      "target": "RRRUUU",
+      "witnesses": [
+        {
+          "source": "UURRRU",
+          "target": "RRRUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        6,
+        12,
+        60,
+        86,
+        141,
+        157,
+        105,
+        74,
+        29,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        6,
+        18,
+        72,
+        146,
+        227,
+        298,
+        262,
+        179,
+        103,
+        30,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "UURRUR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "UURRUR",
+          "target": "UUURRR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        6,
+        16,
+        71,
+        113,
+        187,
+        203,
+        148,
+        101,
+        36,
+        1,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        6,
+        22,
+        87,
+        184,
+        300,
+        390,
+        351,
+        249,
+        137,
+        37,
+        1,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "negative_indices": []
+    },
+    {
+      "source": "UURURR",
+      "target": "UUURRR",
+      "witnesses": [
+        {
+          "source": "UURURR",
+          "target": "UUURRR",
+          "kind": "bump",
+          "k": 2,
+          "l": null
+        }
+      ],
+      "delta": [
+        0,
+        0,
+        4,
+        14,
+        54,
+        100,
+        146,
+        168,
+        116,
+        74,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "elevated_delta": [
+        0,
+        0,
+        4,
+        18,
+        68,
+        154,
+        246,
+        314,
+        284,
+        190,
+        100,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "certificate_degree": 15,
+      "strict_on_open_unit_interval": true,
+      "coefficientwise_nonnegative": true,
+      "positive_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "negative_indices": []
+    }
+  ],
+  "reachability": {
+    "RRRUUU": [],
+    "RRURUU": [
+      "RRRUUU"
+    ],
+    "RRUURU": [
+      "RRRUUU"
+    ],
+    "RRUUUR": [
+      "UUURRR"
+    ],
+    "RURRUU": [
+      "RRRUUU"
+    ],
+    "RURURU": [
+      "RRRUUU",
+      "RRUURU",
+      "RURRUU"
+    ],
+    "RURUUR": [
+      "RRUUUR",
+      "UUURRR"
+    ],
+    "RUURRU": [
+      "RRRUUU",
+      "UURRRU"
+    ],
+    "RUURUR": [
+      "RUUURR",
+      "UURRUR",
+      "UUURRR"
+    ],
+    "RUUURR": [
+      "UUURRR"
+    ],
+    "URRRUU": [
+      "RRRUUU"
+    ],
+    "URRURU": [
+      "RRRUUU",
+      "RRUURU",
+      "URRRUU"
+    ],
+    "URRUUR": [
+      "RRUUUR",
+      "UUURRR"
+    ],
+    "URURRU": [
+      "RRRUUU",
+      "UURRRU"
+    ],
+    "URURUR": [
+      "URUURR",
+      "UURRUR",
+      "UUURRR"
+    ],
+    "URUURR": [
+      "UUURRR"
+    ],
+    "UURRRU": [
+      "RRRUUU"
+    ],
+    "UURRUR": [
+      "UUURRR"
+    ],
+    "UURURR": [
+      "UUURRR"
+    ],
+    "UUURRR": []
+  }
+}

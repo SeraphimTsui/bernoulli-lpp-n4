@@ -1,0 +1,173 @@
+B1 independent definition and certificate audit
+Date: 2026-10-29 (Asia/Shanghai)
+Reviewer: independent AI subagent; not human peer review or formal verification.
+
+Primary source inspected
+Sam McKeown and Shuta Nakajima, On the most likely geodesic in last passage
+percolation, arXiv:2608.11378v2, version date 2026-09-20.
+https://arxiv.org/html/2608.11378v2
+https://arxiv.org/pdf/2608.11378v2
+HTML Section 2, Monotonicity of path probabilities; Figures 3/4 and their
+labels/captions (PDF p.11); Section 5, Lemmas 6--9 and Theorem 3 proof
+(PDF pp.34--37). The PDF title page prints September 22, 2026; this does not
+replace the arXiv version identifier/date.
+
+1. Resolution of indexing and geometry
+
+Let w be the 2n-letter R/U word and t_0=0<t_1<...<t_r=2n its run-end times.
+The proper corners are t_1,...,t_{r-1}; the origin may also be used as t_0.
+At time t_i, h_i=y-x=s_i.
+
+A bump uses a proper corner k with both adjoining outer runs present:
+2<=k<=r-2. Above the diagonal its incoming/outgoing letters are R/U and
+h_k>=0; below they are U/R and h_k<=0. Reverse the word substring from
+t_{k-1} through t_{k+1}. This exchanges the two constant-letter blocks and
+merges them with the same-direction outer blocks, yielding exactly the
+source's signed-run display. The lower bound k>=2 need not be independently
+postulated in that display: k=1 is incompatible with the sign condition
+since s_1=a_1. Weak diagonal equality is retained.
+
+For a genuine unwind, choose 0<=l<k<=r-1 and k>=l+2. Above-side unwinding
+requires h_k>0, h_l>0 if l>0, and h_i<0 for every l<i<k; l=0 replaces
+the left endpoint condition by h_0=0. The below-side version changes all
+signs. Reverse w[t_l:t_k], leaving every R and U letter unchanged. In run
+notation this reverses a_{l+1},...,a_k, then merges same-sign neighbours.
+For l>0 the number of runs decreases by two. For l=0 it decreases by ONE,
+since no preceding run exists. This distinction matters for validation.
+
+The last endpoint is not an extra boundary exception: h_r=0 cannot satisfy
+the strict condition on h_k. Thus k<=r-1 is forced and a_{k+1} exists.
+The source explicitly authorizes l=0 but does not authorize k=r or an
+additional time-reversal closure. We do not add these operations. The word
+reflection R<->U is the stated sign symmetry; whole-word reversal preserves
+probabilities but need not preserve the literal directed single-step graph.
+
+The empty-interior loophole k=l+1 is resolved as follows. The source's
+geometric description requires a crossing excursion, while reversing the
+corresponding one-run word does nothing. The run-merging display assumes
+distinct segment indices; applying its collapsed-index version here can
+count a segment twice and fails to describe that identity. We therefore
+include all genuine crossing excursions, and omit the one-run identity.
+This is an explicit contextual reading of the paper, not an author-confirmed
+erratum. It is consistent with Figure 4's edge-order reversal, Lemma 9's
+strict gain, and the statement that n=1 has no nontrivial moves. No further
+definition ambiguity remains for this operational reading. Any theorem
+must state this genuine-excursion convention rather than silently applying
+the displayed algebra to empty index ranges.
+
+Figure 3 labels a_1+a_3, a_2+a_4, a_5, a_6, matching reversal of blocks
+a_2,a_3 at k=2; its caption rules out another concavity that crosses the
+diagonal. Figure 4 labels a_1+a_5, a_4, a_3, a_6+a_2, matching reversal
+of a_2,...,a_5 at (l,k)=(1,5). The independent implementation follows these
+word operations, not a Euclidean line-reflection routine or R/U exchange.
+
+2. Complete independent move enumeration
+
+src/independent_moves.py generates words by choosing U positions and applies
+the corner/word rules just given. It never imports the primary run-formula
+move generator. The output review/independent_moves.json contains all paths,
+edges, witnesses, exact two-dot gains, and n<=2 complete small count tables.
+
+n   paths   bump   unwind   l=0 unwind   distinct edges   transitive pairs
+1       2      0        0            0                0                  0
+2       6      2        2            2                4                  4
+3      20     14       10            8               24                 30
+4      70     76       44           30              120                188
+
+At each size all witnesses produce distinct ordered path pairs. All output
+words are valid paths and differ from the input. Every edge decreases the
+corner count by the number stated above. The only sinks are R^n U^n and
+U^n R^n, and every other path reaches at least one sink.
+
+The exact mixed two-dot statistic was computed independently by enumerating
+every on-path vertex z and off-path site z' incomparable in coordinate order.
+It equals the count C_gamma^{1,1} in source Lemma 7. All 148 edges across
+n=2,3,4 have strictly positive gains, independently reproducing Lemma 9 for
+the entire finite move domain. This check does not use the main probability
+counts or the source's signed-area summation.
+
+The independent edge sets were then compared to results/moves_n1.json
+through results/moves_n4.json: they agree exactly at all four sizes.
+
+3. Hand-derived n=1 and n=2 controls
+
+For n=1 there are two independent nonendpoint weights A,B. A chosen path
+is maximal exactly when A>=B, so F(p)=1-p(1-p), with raw counts [1,1,1].
+There are no nontrivial legal moves.
+
+For n=2 label the seven nonendpoint weights as
+ a=(1,0), b=(2,0), c=(0,1), d=(1,1), e=(2,1), f=(0,2), g=(1,2).
+The six path scores are a+b+e, a+d+e, a+d+g, c+d+e, c+d+g, c+f+g.
+Set q=1-p, t=pq, A=1-t=p+q^2, B=p^2+q^2.
+
+For staircase RURU, the maximality conditions simplify to
+ a>=c, e>=g, d>=b, (a-c)+(e-g)+d>=f.
+Conditioning on d gives
+ F_RURU = p A^2 + q^2(A^2-p B^2) = A^3-p q^2 B^2.
+
+For the crossing middle path RUUR, the conditions are a>=c, g>=e,
+ b<=d+(g-e), f<=d+(a-c). Conditioning on d gives
+ F_RUUR = p A^2 + q [q(p+B)]^2.
+
+For corner RRUU, let alpha=c-a and beta=g-e. Each has probabilities
+ P(-1)=t, P(0)=B, P(1)=t. Its conditions become
+ b-d>=max(alpha,0)+max(beta,0), b-f>=alpha+beta.
+The nine (alpha,beta) possibilities give
+ F_RRUU = B^2(p+q^3) + (2tB+t^2)A + 2t^3 + 2t^2 B q.
+The other three probabilities follow by lattice symmetry. Substitution
+p=x/(1+x), multiplication by (1+x)^7, and expansion give raw-count rows:
+ corner RRUU/UURR: [1,3,11,13,17,8,4,1];
+ staircase RURU/URUR: [1,3,9,11,13,8,4,1];
+ crossing RUUR/URRU: [1,3,9,12,14,8,4,1].
+These are hand event decompositions, separately checked by coordinate-set
+enumeration of all 128 assignments and grid dynamic programming. As an
+additional algebra control, all three displayed polynomials (degree at most
+seven) agree with their count-table expressions at the nine exact rational
+values p=i/8, i=0,...,8; equality follows as a polynomial identity.
+
+The four n=2 moves are RURU->RRUU, URUR->UURR (bumps),
+RUUR->UURR, URRU->RRUU (boundary unwinds). Each has two-dot gain 2.
+Their raw difference rows are respectively [0,0,2,2,4,0,0,0] for a bump
+and [0,0,2,1,3,0,0,0] for an unwind, proving the full-p strict comparisons.
+
+4. Audit of the n=4 exceptional coefficients and degree elevation
+
+After the primary counts and independent DP replay were available, this
+reviewer independently subtracted rows along every independently generated
+edge. Exactly two n=4 edges have a negative raw coefficient:
+ RUURUURR -> UURRUURR,
+ URRURRUU -> RRUURRUU.
+The first has source runs (-1,2,-1,2,-2). At (l,k)=(0,2), h_1=-1 and
+h_2=1; reversing prefix RUU to UUR gives exactly UURRUURR, whose runs are
+(2,-2,2,-2). It is therefore a genuine authorized boundary unwind, with
+corner decrease one and mixed two-dot gain two. The second is its sign
+reflection. Neither may be discarded to obtain coefficientwise positivity.
+
+The common raw difference vector d_0,...,d_23 is
+[0,0,2,-2,40,67,328,864,1530,2832,3783,3948,3629,2596,1347,536,
+ 204,94,44,12,1,0,0,0].
+
+For q=1-p, multiplying sum d_j p^j q^(23-j) by p+q=1 gives degree-24
+coefficients e_j=d_j+d_{j-1}, with out-of-range d's zero. They are
+[0,0,2,0,38,107,395,1192,2394,4362,6615,7731,7577,6225,3943,
+ 1883,740,298,138,56,13,1,0,0,0].
+Every entry is nonnegative and e_2=2>0. Hence the difference is strictly
+positive for every 0<p<1. All the other 118 n=4 edges already have
+nonnegative degree-23 coefficients and positive d_2. The same exact
+elevation was independently checked along all 148 edges at n=2,3,4;
+all have nonnegative elevated coefficients and positive e_2. This proof
+needs no floating point sampling, root finding, or uncompleted subdivision.
+
+The negative d_3 has a useful interpretation: conditional on exactly three
+occupied nonendpoint sites, the first edge has probability difference
+-2/binom(23,3)=-2/1771. Thus fixed-cardinality monotonicity is false, although
+the Bernoulli-p comparison is true. This is not a counterexample to the
+paper's Bernoulli conjecture.
+
+Scope of this review
+Independent full finite move-domain coverage; analytic n<=2 controls;
+independent all-edge sign-certificate arithmetic using the supplied count
+tables. This reviewer did not independently execute the full n=4 counting
+program; that is a separate DP replay and must be credited to its own
+verification report. No human peer review, formal proof assistant checking,
+global novelty guarantee, author communication, publication or submission.

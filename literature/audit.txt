@@ -1,0 +1,55 @@
+B1 — bounded primary-source literature and version audit
+Access date: 2026-10-29 (Asia/Shanghai)
+Scope: Bernoulli vertex last-passage percolation on {0,...,4}^2; membership in the full maximizing-path set, including ties; every genuine bump/unwind comparison for every p in [0,1].
+
+ASSESSMENT
+No identical all-parameter n=4 integer certificate or theorem was located in the sources and 15 search queries recorded below. This is bounded negative evidence, not an exhaustive novelty search, priority certificate, or assertion that no one has done the calculation. Private work, unindexed repositories, inaccessible citation indexes, and differently phrased results remain possible. Mathematical correctness and significance require separate assessment. A finite exact verification would remain a modest specialization, not a proof for arbitrary n or distributions.
+
+CURRENT PRIMARY SOURCE
+Sam McKeown and Shuta Nakajima, On the most likely geodesic in last passage percolation, arXiv:2608.11378v2, 20 September 2026.
+Version page: https://arxiv.org/abs/2608.11378
+Inspected text: https://arxiv.org/html/2608.11378v2
+Version history: v1 11 August 2026; latest listed v2 20 September 2026. Section 1 defines geodesics by membership in the maximizing set. Section 2, subsection Monotonicity of path probabilities, specifies signed runs and bump/unwind moves; Figures 3/4 give geometric interpretations. The unnumbered expectation immediately before Theorem 3 motivates the present target. Theorem 3, equation (6), proves strict increase only for sufficiently small positive p. Section 5, Lemmas 6–9 and proof of Theorem 3, uses two-dot counts and bounds the remaining terms. Its explicit choice gives p_4=1/18400. It supplies no all-p n=4 count table in the inspected material. Remark 1 concerns distribution-dependent reversal between some path pairs, not a certificate for every ordered Bernoulli pair. Figure 1 is exponential-weight simulation, not the target calculation. The v2 note and Appendix C resolve a different former moderate-deviation assumption; that old v1 condition is excluded from this project.
+
+AUTHOR PUBLIC MATERIAL
+https://njimamath.github.io/Homepage/Publication/index.html — opened successfully; current list labels the paper submitted and links the title to the arXiv record. No code, supplement, or finite-case certificate is linked beside this entry. Other entries do explicitly link Lean repositories, so those unrelated links must not be attributed to the LPP paper.
+https://people.math.wisc.edu/~smckeown2/ — direct retrieval returned HTTP 403. A search-engine excerpt states last updated October 2025 and lists older preprints. The excerpt is insufficient to verify current attachments and is not treated as a current exhaustive author list.
+https://www.math.nus.edu.sg/category/events/colloquia-seminars/probability/ — institutional seminar listing found: 9 September 2026 talk on the most likely geodesic. The available abstract describes the same project and gives no n=4 certificate. This is supplementary context only.
+The arXiv HTML's GitHub links found by text search were site infrastructure, not author code. Search for the exact identifier/title on GitHub did not identify a matching repository within returned results. None of these observations proves absence of public or private code.
+
+BACKWARD CITATION CHECK
+Tom Alberts and Eric Cator, On the Passage Time Geometry of the Last Passage Percolation Problem, ALEA 18 (2021), 211–247, DOI 10.30757/ALEA.v18-10.
+Publisher PDF: https://alea.impa.br/articles/v18/18-10.pdf
+McKeown–Nakajima reference [2]. Inspected abstract/model description and Section 8, pp. 242–244 (PDF pages 32–34, one-based), especially Most Likely Paths and Monotonicity of the Path Measure. The paper analyzes the cones of environments making paths maximal and asks which paths are most likely. Section 8 leaves a suitable geometric ordering open rather than defining the later bump/unwind relation. It is background for the finite investigation, not an identical n=4 all-p certificate in those inspected sections. Its [1,n]^2 convention differs by one from this project's {0,...,n}^2.
+
+Tom Alberts, Riddhipratim Basu, Sean Groathouse and Xiao Shen, Large deviations of geodesic midpoint fluctuations in last-passage percolation with general i.i.d. weights, arXiv:2502.00942v1 (2 February 2025).
+https://arxiv.org/abs/2502.00942
+McKeown–Nakajima reference [1]. Abstract/version metadata inspected: asymptotic midpoint deviations and an exponential-weight corner-path asymptotic. Not the finite all-p Bernoulli path-order problem. This is an abstract-level scope comparison, not a full-paper exclusion audit.
+
+FORWARD CITATION COVERAGE AND FAILURES
+The arXiv-provided Semantic Scholar link redirected to https://www.semanticscholar.org/paper/c200d4ac5e937ce3a08d7f0f9d61c467701ad666, which the retrieval tool could not access (reported 500/non-retryable redirect failure).
+The arXiv Google Scholar link https://scholar.google.com/scholar_lookup?arxiv_id=2608.11378 returned HTTP 429.
+The arXiv ADS link https://ui.adsabs.harvard.edu/abs/arXiv%3A2608.11378 returned HTTP 405.
+Therefore no complete forward-citation list was obtained. Exact-title/identifier searches returned the original paper, author listing, catalogs and secondary summaries; no inspected primary follow-up resolved the finite target. Secondary Pith/Moonlight summaries discuss the superseded v1 moderate-deviation condition and are excluded as evidence of current mathematical status. No inference is made from a zero or missing citation count.
+
+SEARCH LOG (15 queries, all executed 2026-10-29)
+1. "Sam McKeown" "Shuta Nakajima" geodesic
+2. "2608.11378" monotonicity code
+3. "Bernoulli" "bump" "unwinding" percolation
+4. "Sam McKeown" mathematics homepage
+5. "Bernoulli" "most likely geodesic" n=4
+6. "last passage percolation" "path probabilities" monotonicity finite
+7. "2608.11378" -site:arxiv.org -site:scirate.com -site:researchgate.net -site:pith.science
+8. "last passage" "Bernoulli" "four" "geodesic"
+9. "last passage" "bumping" "unwinding"
+10. "most likely geodesic" "Bernoulli" "n=4"
+11. "modal geodesics" "Bernoulli" monotonicity
+12. site:github.com "2608.11378" OR "most likely geodesic"
+13. "last passage percolation" "path probabilities" "Bernoulli" exact
+14. "On the most likely geodesic in last passage percolation" "code"
+15. "Shuta Nakajima" "geodesic" github
+
+Queries were issued in five batches of three. Returned results were screened for primary-source relevance; irrelevant results, catalogs, duplicate preprint copies and AI commentary were not used to establish a theorem or priority. Source opens and within-page searches are additional retrieval actions, not extra search queries. Related Bernoulli matching, dynamic LPP, and exponential-geodesic distribution results were not mistaken for this all-ties finite ordering. No author/editor contact, submission, upload or public release was performed.
+
+RECOMMENDED MANUSCRIPT WORDING
+As of 29 October 2026, a bounded search of the cited primary sources and author materials did not locate the same finite certificate. Priority is not established, and forward-citation coverage was incomplete. The contribution is an exact finite verification with reproducible certificates; its independent research significance is unassessed.

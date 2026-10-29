@@ -1,0 +1,49 @@
+B1 independent manuscript and certificate-checker review
+Date: 2026-10-29 (Asia/Shanghai)
+Reviewer: independent AI subagent responsible for the separate DP replay.
+Scope: read-only review of manuscript/main.tex and src/certify.py, supported by the actual stored count tables, geometric edge witnesses, complete certificates, source-definition report, and literature audit. Only this review file was written.
+Reviewed SHA256 snapshots:
+  manuscript/main.tex: 6375313338E8F51F4CA380A01857C2FFDA2A9A5974163C72A6E3721590D368CB
+  src/certify.py: DC06339574A2468DB4D7AA7A09E783D54BF539CB78523B19FF4553AF2F79CE37
+
+Decision
+PASS for the stated finite computer-assisted theorem. No blocking mathematical correction is required. This is independent AI review, not human peer review, author confirmation of the source's conventions, or proof-assistant verification. Compilation and rendered-page inspection are outside this review and remain with the parent agent.
+
+1. Model and quantifiers
+The model correctly uses 25 vertices and 70 paths for n=4, with all maximizing ties counted. The 23-bit endpoint reduction is exact because every path contains both endpoints. Raw cardinality counts have no additional binomial multiplier. The manuscript keeps strictness on 0<p<1 and correctly has equality and membership probability one at both endpoints. It does not infer a total ordering or claim a theorem for n>=5 or another weight distribution.
+
+2. Move semantics
+The explicit bump bounds 2<=k<=r-2, weak diagonal conditions, and both signs match the nondegenerate source operation. k=1 cannot pass its sign test. The unwind convention retains l=0, demands a genuine nonempty opposite-side corner excursion, excludes the one-run identity, and forbids k=r through s_r=0. The replacement/reversal descriptions agree. Boundary unwinding reduces run count by one, interior unwinding and bumping by two. This makes the relation acyclic and justifies the transitive strict partial order. The text appropriately labels the empty-interior convention as a contextual reading of the geometric operations, not an author-confirmed correction to a literal overlapping-index formula.
+The independent definition agent's report supplies the full primary-source inspection. This review checked the manuscript against that report and independently checked the saved move witnesses; it did not repeat the entire primary-source retrieval.
+
+3. Complete certificate arithmetic independently rechecked
+Using the independent DP rows and independent geometric edge list, I subtracted every edge row afresh and compared the results with the saved certificate. I did not call src/certify.py for these review checks. All 148 edges over n=2,3,4 agree exactly. Every degree-elevated coefficient e_k=d_k+d_(k-1) is nonnegative, and every e_2>=2. All row keys are legal words, all row lengths are m+1, and every value is an integer.
+The two n=4 exceptions are exactly RUURUURR -> UURRUURR and URRURRUU -> RRUURRUU. Both the 24-entry d array and 25-entry e array in the manuscript table match the independent differences exactly, including d_3=-2, e_3=0, e_4=38, and the padded d_24=0 convention. No exceptional edge is silently removed.
+Multiplication by p+q=1 is the correct degree elevation for the UNNORMALIZED basis p^k q^(m-k); using the usual normalized Bernstein formula instead would be wrong, but the manuscript does not do that. With m=23 the retained k=2 term is 2 p^2 q^22, exactly the printed lower bound. The square identity for the exceptional initial terms expands correctly:
+  (1/2)[(2q-p)^2+79p^2] = 2q^2-2pq+40p^2.
+The stronger fixed-cardinality comparison really fails because binomial(23,3)=1771 and d_3=-2. The manuscript correctly distinguishes this conditional ensemble from independent Bernoulli weights.
+
+4. Independent complete reachability comparison
+Starting from the saved independent geometric edges, I separately built each reachability set by breadth/depth-first traversal, without the run-count dynamic ordering of src/certify.py. The COMPLETE source-to-reachable-word mappings match results/certificates_nN.json, not only the counts. They contain respectively 0,4,30,188 strict ordered pairs for n=1,2,3,4. The only sinks are the two corner paths. The corollary on exactly two modal paths follows from this reachability and reflection symmetry.
+
+5. Enumeration proof and implementation audit
+The mask/subset bijection and recursive enumeration justify the coverage argument. The independent lattice recurrence proof by induction is valid. The score and counter storage bounds are ample. After completion of my independent replay I also inspected the primary population-count implementation: for its actual domain v<2^23, the byte-reduction multiplication remains below 2^53, so IEEE-754 multiplication does not lose integer information before the unsigned bit shift. The manuscript's exact-integer claim is therefore justified in its hard n<=4 scope.
+The 2034 matched coefficients and actual coverage/runtime statements agree with the stored receipts. No full enumeration was rerun during this manuscript review; the earlier independent complete replay is documented separately in replay_report.txt.
+
+6. Small n hand derivations
+The n=1 event X>=Y gives 1-p+p^2 and raw row [1,1,1]. All three n=2 generating polynomials were independently derived in replay_report.txt from the six explicit path scores. The manuscript reproduces these correctly. The RURU subtraction removes precisely d=b=0, a=c, e=g, f=1. The RUUR split on d is valid. For the corner, b>=d and its three cases yield the displayed H polynomial and all 48 coefficients through symmetry. The displayed corner-minus-other differences expand correctly.
+
+7. src/certify.py review
+The direct-vs-independent exact count comparison, layer totals, symmetry checks, incomparable-pair identity, move/witness equality, positive two-dot gain, and raw/elevated differences are logically sound for the supplied files. Its run-count-ascending reachability computation is valid because every edge decreases run count. I independently confirmed its full reachability output as described above.
+Two optional hardening changes would make the executable checker more explicit; neither changes or invalidates the delivered result:
+  (a) assert that each count row has exactly m+1 entries, each entry has integer type, and row keys equal the complete generated path universe. The reviewed data already satisfy these conditions and both enumerators generate them by construction.
+  (b) assert elevated[2]>=2 (rather than merely >0) to encode the printed quantitative lower bound directly. Actual minima are already 2, as independently checked here; minimum_delta2 in the saved summary also records this.
+The checker uses Python assert statements; reproduction must be run normally, as documented, not with Python -O which removes assertions. This is an ordinary executable checker, not a verifier intended to withstand malicious input data or altered interpreters.
+
+8. Evidence boundaries
+The manuscript's 15-query bounded-search description and inaccessible author/citation sources agree with literature/audit.txt. This review checked reporting consistency, not a fresh independent literature search. Novelty and research significance are explicitly unestablished. The source's small-p bound is correctly specialized: 8*binomial(25,3)=18400. The manuscript distinguishes the unrelated v2 moderate-deviation issue and retains the no-publication/no-external-contact boundary. The unsigned author line does not invent a person or affiliation.
+No unsupported general breakthrough, novelty guarantee, human review, formal verification, or empirical validation claim was found.
+
+Addendum: checker hardening and isolated reproduction comparison
+The optional changes in section 7 have now been implemented and reviewed: the checker imports paths, asserts sorted row keys equal paths(n), asserts exactly m+1 integer entries per row, and explicitly requires elevated[2]>=2. These strengthen input validation and directly encode the quantitative bound; the counting/sign logic is unchanged. Current src/certify.py SHA256 is 8B00E1B5E67773F0C6641086161013F46D37F368E1F9AC30CCE89E0A2250C208. The manuscript remains unchanged with SHA256 6375313338E8F51F4CA380A01857C2FFDA2A9A5974163C72A6E3721590D368CB. The trial copy of the checker is byte-identical to this hardened version.
+I compared the saved original and review/reproduction_trial outputs without rerunning either enumeration. For every n=1,2,3,4: the primary counts, layers, masks, site coordinates and coverage fields match; independent counts, layers, invariants, tie histograms and coverage fields match; move files match in full; certificate edge arrays and full reachability sets match; all mathematical summary fields match after excluding CPU-timing fields. Each count CSV is byte-identical. The independent-move JSON also matches in full. The trial console ends with successful complete verification. Thus all deterministic mathematical outputs of the isolated one-command reproduction match the retained results, while runtime receipts appropriately differ. Review remains PASS with no outstanding correction.

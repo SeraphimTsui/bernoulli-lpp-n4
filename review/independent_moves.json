@@ -1,0 +1,2530 @@
+{
+  "schema": 1,
+  "implementation": "step-word reversal at geometric corners",
+  "source": "https://arxiv.org/html/2608.11378v2",
+  "access_date": "2026-10-29",
+  "sizes": {
+    "1": {
+      "path_count": 2,
+      "witness_count": 0,
+      "distinct_edge_count": 0,
+      "bump_witnesses": 0,
+      "unwind_witnesses": 0,
+      "boundary_unwind_witnesses": 0,
+      "strict_transitive_pairs": 0,
+      "sinks": [
+        "RU",
+        "UR"
+      ],
+      "edges": [],
+      "distinct_pairs": [],
+      "mixed_two_dot_counts": {
+        "RU": 1,
+        "UR": 1
+      },
+      "small_counts": {
+        "RU": [
+          1,
+          1,
+          1
+        ],
+        "UR": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "2": {
+      "path_count": 6,
+      "witness_count": 4,
+      "distinct_edge_count": 4,
+      "bump_witnesses": 2,
+      "unwind_witnesses": 2,
+      "boundary_unwind_witnesses": 2,
+      "strict_transitive_pairs": 4,
+      "sinks": [
+        "RRUU",
+        "UURR"
+      ],
+      "edges": [
+        {
+          "source": "RURU",
+          "target": "RRUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUUR",
+          "target": "UURR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRU",
+          "target": "RRUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URUR",
+          "target": "UURR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        }
+      ],
+      "distinct_pairs": [
+        [
+          "RURU",
+          "RRUU"
+        ],
+        [
+          "RUUR",
+          "UURR"
+        ],
+        [
+          "URRU",
+          "RRUU"
+        ],
+        [
+          "URUR",
+          "UURR"
+        ]
+      ],
+      "mixed_two_dot_counts": {
+        "RRUU": 8,
+        "RURU": 6,
+        "RUUR": 6,
+        "URRU": 6,
+        "URUR": 6,
+        "UURR": 8
+      },
+      "small_counts": {
+        "RRUU": [
+          1,
+          3,
+          11,
+          13,
+          17,
+          8,
+          4,
+          1
+        ],
+        "RURU": [
+          1,
+          3,
+          9,
+          11,
+          13,
+          8,
+          4,
+          1
+        ],
+        "RUUR": [
+          1,
+          3,
+          9,
+          12,
+          14,
+          8,
+          4,
+          1
+        ],
+        "URRU": [
+          1,
+          3,
+          9,
+          12,
+          14,
+          8,
+          4,
+          1
+        ],
+        "URUR": [
+          1,
+          3,
+          9,
+          11,
+          13,
+          8,
+          4,
+          1
+        ],
+        "UURR": [
+          1,
+          3,
+          11,
+          13,
+          17,
+          8,
+          4,
+          1
+        ]
+      }
+    },
+    "3": {
+      "path_count": 20,
+      "witness_count": 24,
+      "distinct_edge_count": 24,
+      "bump_witnesses": 14,
+      "unwind_witnesses": 10,
+      "boundary_unwind_witnesses": 8,
+      "strict_transitive_pairs": 30,
+      "sinks": [
+        "RRRUUU",
+        "UUURRR"
+      ],
+      "edges": [
+        {
+          "source": "RRURUU",
+          "target": "RRRUUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "RRUURU",
+          "target": "RRRUUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RRUUUR",
+          "target": "UUURRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 5,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RURRUU",
+          "target": "RRRUUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RURURU",
+          "target": "RRUURU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURURU",
+          "target": "RURRUU",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURUUR",
+          "target": "RRUUUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURRU",
+          "target": "UURRRU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURRU",
+          "target": "RRRUUU",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "RUURUR",
+          "target": "RUUURR",
+          "kind": "bump",
+          "k": 3,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURUR",
+          "target": "UURRUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUUURR",
+          "target": "UUURRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 4,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URRRUU",
+          "target": "RRRUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 4,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URRURU",
+          "target": "URRRUU",
+          "kind": "bump",
+          "k": 3,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRURU",
+          "target": "RRUURU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRUUR",
+          "target": "RRUUUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRUUR",
+          "target": "UUURRR",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "URURRU",
+          "target": "UURRRU",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURUR",
+          "target": "UURRUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURUR",
+          "target": "URUURR",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URUURR",
+          "target": "UUURRR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "UURRRU",
+          "target": "RRRUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 5,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "UURRUR",
+          "target": "UUURRR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "UURURR",
+          "target": "UUURRR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        }
+      ],
+      "distinct_pairs": [
+        [
+          "RRURUU",
+          "RRRUUU"
+        ],
+        [
+          "RRUURU",
+          "RRRUUU"
+        ],
+        [
+          "RRUUUR",
+          "UUURRR"
+        ],
+        [
+          "RURRUU",
+          "RRRUUU"
+        ],
+        [
+          "RURURU",
+          "RRUURU"
+        ],
+        [
+          "RURURU",
+          "RURRUU"
+        ],
+        [
+          "RURUUR",
+          "RRUUUR"
+        ],
+        [
+          "RUURRU",
+          "RRRUUU"
+        ],
+        [
+          "RUURRU",
+          "UURRRU"
+        ],
+        [
+          "RUURUR",
+          "RUUURR"
+        ],
+        [
+          "RUURUR",
+          "UURRUR"
+        ],
+        [
+          "RUUURR",
+          "UUURRR"
+        ],
+        [
+          "URRRUU",
+          "RRRUUU"
+        ],
+        [
+          "URRURU",
+          "RRUURU"
+        ],
+        [
+          "URRURU",
+          "URRRUU"
+        ],
+        [
+          "URRUUR",
+          "RRUUUR"
+        ],
+        [
+          "URRUUR",
+          "UUURRR"
+        ],
+        [
+          "URURRU",
+          "UURRRU"
+        ],
+        [
+          "URURUR",
+          "URUURR"
+        ],
+        [
+          "URURUR",
+          "UURRUR"
+        ],
+        [
+          "URUURR",
+          "UUURRR"
+        ],
+        [
+          "UURRRU",
+          "RRRUUU"
+        ],
+        [
+          "UURRUR",
+          "UUURRR"
+        ],
+        [
+          "UURURR",
+          "UUURRR"
+        ]
+      ],
+      "mixed_two_dot_counts": {
+        "RRRUUU": 27,
+        "RRURUU": 23,
+        "RRUURU": 21,
+        "RRUUUR": 21,
+        "RURRUU": 21,
+        "RURURU": 19,
+        "RURUUR": 19,
+        "RUURRU": 19,
+        "RUURUR": 19,
+        "RUUURR": 21,
+        "URRRUU": 21,
+        "URRURU": 19,
+        "URRUUR": 19,
+        "URURRU": 19,
+        "URURUR": 19,
+        "URUURR": 21,
+        "UURRRU": 21,
+        "UURRUR": 21,
+        "UURURR": 23,
+        "UUURRR": 27
+      }
+    },
+    "4": {
+      "path_count": 70,
+      "witness_count": 120,
+      "distinct_edge_count": 120,
+      "bump_witnesses": 76,
+      "unwind_witnesses": 44,
+      "boundary_unwind_witnesses": 30,
+      "strict_transitive_pairs": 188,
+      "sinks": [
+        "RRRRUUUU",
+        "UUUURRRR"
+      ],
+      "edges": [
+        {
+          "source": "RRRURUUU",
+          "target": "RRRRUUUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RRRUURUU",
+          "target": "RRRRUUUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 10
+        },
+        {
+          "source": "RRRUUURU",
+          "target": "RRRRUUUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 12
+        },
+        {
+          "source": "RRRUUUUR",
+          "target": "UUUURRRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 7,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 12
+        },
+        {
+          "source": "RRURRUUU",
+          "target": "RRRRUUUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 10
+        },
+        {
+          "source": "RRURURUU",
+          "target": "RRRUURUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "RRURURUU",
+          "target": "RRURRUUU",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 4,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "RRURUURU",
+          "target": "RRRUUURU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "RRURUURU",
+          "target": "RRURRUUU",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 4,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RRURUUUR",
+          "target": "RRRUUUUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "RRURUUUR",
+          "target": "UUURURRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 4,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 7,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 10
+        },
+        {
+          "source": "RRUURRUU",
+          "target": "RRRRUUUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 16
+        },
+        {
+          "source": "RRUURURU",
+          "target": "RRRUUURU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RRUURURU",
+          "target": "RRUURRUU",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RRUURUUR",
+          "target": "RRRUUUUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RRUUURRU",
+          "target": "UUURRRRU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 5,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RRUUURRU",
+          "target": "RRRRUUUU",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "below",
+          "start_step": 2,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 18
+        },
+        {
+          "source": "RRUUURUR",
+          "target": "RRUUUURR",
+          "kind": "bump",
+          "k": 3,
+          "side": "above",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RRUUURUR",
+          "target": "UUURRRUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 5,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RRUUUURR",
+          "target": "UUUURRRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 6,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 16
+        },
+        {
+          "source": "RURRRUUU",
+          "target": "RRRRUUUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 12
+        },
+        {
+          "source": "RURRURUU",
+          "target": "RRRUURUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RURRURUU",
+          "target": "RURRRUUU",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 4,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "RURRUURU",
+          "target": "RRRUUURU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RURRUURU",
+          "target": "RURRRUUU",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 4,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RURRUUUR",
+          "target": "RRRUUUUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RURURRUU",
+          "target": "RRUURRUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURURRUU",
+          "target": "RURRRUUU",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RURURURU",
+          "target": "RRUURURU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURURURU",
+          "target": "RURRUURU",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURURURU",
+          "target": "RURURRUU",
+          "kind": "bump",
+          "k": 6,
+          "side": "below",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURURUUR",
+          "target": "RRUURUUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURURUUR",
+          "target": "RURRUUUR",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURUURRU",
+          "target": "RRUUURRU",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURUURRU",
+          "target": "RURRRUUU",
+          "kind": "unwind",
+          "l": 3,
+          "k": 5,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "RURUURUR",
+          "target": "RRUUURUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURUURUR",
+          "target": "RURUUURR",
+          "kind": "bump",
+          "k": 5,
+          "side": "above",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RURUUURR",
+          "target": "RRUUUURR",
+          "kind": "bump",
+          "k": 2,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURRRUU",
+          "target": "UURRRRUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURRRUU",
+          "target": "RRRRUUUU",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 18
+        },
+        {
+          "source": "RUURRURU",
+          "target": "RUURRRUU",
+          "kind": "bump",
+          "k": 4,
+          "side": "below",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURRURU",
+          "target": "UURRRURU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURRURU",
+          "target": "RRRUUURU",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "RUURRUUR",
+          "target": "UURRRUUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURRUUR",
+          "target": "RRRUUUUR",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "RUURRUUR",
+          "target": "RUUUURRR",
+          "kind": "unwind",
+          "l": 2,
+          "k": 4,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "RUURURRU",
+          "target": "RUUURRRU",
+          "kind": "bump",
+          "k": 3,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURURRU",
+          "target": "UURRURRU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURURUR",
+          "target": "RUUURRUR",
+          "kind": "bump",
+          "k": 3,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURURUR",
+          "target": "RUURUURR",
+          "kind": "bump",
+          "k": 5,
+          "side": "above",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURURUR",
+          "target": "UURRURUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUURUURR",
+          "target": "RUUUURRR",
+          "kind": "bump",
+          "k": 3,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RUURUURR",
+          "target": "UURRUURR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "RUUURRRU",
+          "target": "UUURRRRU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 4,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RUUURRRU",
+          "target": "RRRRUUUU",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "below",
+          "start_step": 1,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 18
+        },
+        {
+          "source": "RUUURRUR",
+          "target": "RUUUURRR",
+          "kind": "bump",
+          "k": 3,
+          "side": "above",
+          "start_step": 4,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RUUURRUR",
+          "target": "UUURRRUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 4,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RUUURURR",
+          "target": "RUUUURRR",
+          "kind": "bump",
+          "k": 3,
+          "side": "above",
+          "start_step": 4,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "RUUURURR",
+          "target": "UUURRURR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 4,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "RUUUURRR",
+          "target": "UUUURRRR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "above",
+          "start_step": 0,
+          "end_step": 5,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 12
+        },
+        {
+          "source": "URRRRUUU",
+          "target": "RRRRUUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 5,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 12
+        },
+        {
+          "source": "URRRURUU",
+          "target": "URRRRUUU",
+          "kind": "bump",
+          "k": 3,
+          "side": "below",
+          "start_step": 4,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "URRRURUU",
+          "target": "RRRUURUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 4,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URRRUURU",
+          "target": "URRRRUUU",
+          "kind": "bump",
+          "k": 3,
+          "side": "below",
+          "start_step": 4,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URRRUURU",
+          "target": "RRRUUURU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 4,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URRRUUUR",
+          "target": "RRRUUUUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 4,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URRRUUUR",
+          "target": "UUUURRRR",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 18
+        },
+        {
+          "source": "URRURRUU",
+          "target": "URRRRUUU",
+          "kind": "bump",
+          "k": 3,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URRURRUU",
+          "target": "RRUURRUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRURURU",
+          "target": "URRRUURU",
+          "kind": "bump",
+          "k": 3,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRURURU",
+          "target": "URRURRUU",
+          "kind": "bump",
+          "k": 5,
+          "side": "below",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRURURU",
+          "target": "RRUURURU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRURUUR",
+          "target": "URRRUUUR",
+          "kind": "bump",
+          "k": 3,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRURUUR",
+          "target": "RRUURUUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRUURRU",
+          "target": "RRUUURRU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRUURRU",
+          "target": "UUURRRRU",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "URRUURRU",
+          "target": "URRRRUUU",
+          "kind": "unwind",
+          "l": 2,
+          "k": 4,
+          "side": "below",
+          "start_step": 3,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "URRUURUR",
+          "target": "URRUUURR",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRUURUR",
+          "target": "RRUUURUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRUURUR",
+          "target": "UUURRRUR",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "URRUUURR",
+          "target": "RRUUUURR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 3,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URRUUURR",
+          "target": "UUUURRRR",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 18
+        },
+        {
+          "source": "URURRRUU",
+          "target": "UURRRRUU",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURRURU",
+          "target": "UURRRURU",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURRURU",
+          "target": "URURRRUU",
+          "kind": "bump",
+          "k": 5,
+          "side": "below",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURRUUR",
+          "target": "UURRRUUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURRUUR",
+          "target": "URUUURRR",
+          "kind": "unwind",
+          "l": 3,
+          "k": 5,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 8
+        },
+        {
+          "source": "URURURRU",
+          "target": "UURRURRU",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURURRU",
+          "target": "URUURRRU",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURURUR",
+          "target": "UURRURUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURURUR",
+          "target": "URUURRUR",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURURUR",
+          "target": "URURUURR",
+          "kind": "bump",
+          "k": 6,
+          "side": "above",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURUURR",
+          "target": "UURRUURR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 3,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "URURUURR",
+          "target": "URUUURRR",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URUURRRU",
+          "target": "UUURRRRU",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URUURRUR",
+          "target": "UUURRRUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URUURRUR",
+          "target": "URUUURRR",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 4,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URUURURR",
+          "target": "UUURRURR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "URUURURR",
+          "target": "URUUURRR",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 4,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "URUUURRR",
+          "target": "UUUURRRR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 1,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 12
+        },
+        {
+          "source": "UURRRRUU",
+          "target": "RRRRUUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 6,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 16
+        },
+        {
+          "source": "UURRRURU",
+          "target": "UURRRRUU",
+          "kind": "bump",
+          "k": 3,
+          "side": "below",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "UURRRURU",
+          "target": "RRRUUURU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 5,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "UURRRUUR",
+          "target": "RRRUUUUR",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 5,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "UURRRUUR",
+          "target": "UUUURRRR",
+          "kind": "unwind",
+          "l": 1,
+          "k": 3,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 18
+        },
+        {
+          "source": "UURRURRU",
+          "target": "UUURRRRU",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "UURRURUR",
+          "target": "UUURRRUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "UURRURUR",
+          "target": "UURRUURR",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 5,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 2
+        },
+        {
+          "source": "UURRUURR",
+          "target": "UUUURRRR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 16
+        },
+        {
+          "source": "UURURRRU",
+          "target": "UUURRRRU",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "UURURRRU",
+          "target": "RRRURUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 4,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 7,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 10
+        },
+        {
+          "source": "UURURRUR",
+          "target": "UUURRRUR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "UURURRUR",
+          "target": "UURUURRR",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 4,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        },
+        {
+          "source": "UURURURR",
+          "target": "UUURRURR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 4,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "UURURURR",
+          "target": "UURUURRR",
+          "kind": "bump",
+          "k": 4,
+          "side": "above",
+          "start_step": 4,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 4
+        },
+        {
+          "source": "UURUURRR",
+          "target": "UUUURRRR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 2,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 10
+        },
+        {
+          "source": "UUURRRRU",
+          "target": "RRRRUUUU",
+          "kind": "unwind",
+          "l": 0,
+          "k": 2,
+          "side": "below",
+          "start_step": 0,
+          "end_step": 7,
+          "corner_decrease": 1,
+          "mixed_two_dot_gain": 12
+        },
+        {
+          "source": "UUURRRUR",
+          "target": "UUUURRRR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 7,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 12
+        },
+        {
+          "source": "UUURRURR",
+          "target": "UUUURRRR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 6,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 10
+        },
+        {
+          "source": "UUURURRR",
+          "target": "UUUURRRR",
+          "kind": "bump",
+          "k": 2,
+          "side": "above",
+          "start_step": 3,
+          "end_step": 5,
+          "corner_decrease": 2,
+          "mixed_two_dot_gain": 6
+        }
+      ],
+      "distinct_pairs": [
+        [
+          "RRRURUUU",
+          "RRRRUUUU"
+        ],
+        [
+          "RRRUURUU",
+          "RRRRUUUU"
+        ],
+        [
+          "RRRUUURU",
+          "RRRRUUUU"
+        ],
+        [
+          "RRRUUUUR",
+          "UUUURRRR"
+        ],
+        [
+          "RRURRUUU",
+          "RRRRUUUU"
+        ],
+        [
+          "RRURURUU",
+          "RRRUURUU"
+        ],
+        [
+          "RRURURUU",
+          "RRURRUUU"
+        ],
+        [
+          "RRURUURU",
+          "RRRUUURU"
+        ],
+        [
+          "RRURUURU",
+          "RRURRUUU"
+        ],
+        [
+          "RRURUUUR",
+          "RRRUUUUR"
+        ],
+        [
+          "RRURUUUR",
+          "UUURURRR"
+        ],
+        [
+          "RRUURRUU",
+          "RRRRUUUU"
+        ],
+        [
+          "RRUURURU",
+          "RRRUUURU"
+        ],
+        [
+          "RRUURURU",
+          "RRUURRUU"
+        ],
+        [
+          "RRUURUUR",
+          "RRRUUUUR"
+        ],
+        [
+          "RRUUURRU",
+          "RRRRUUUU"
+        ],
+        [
+          "RRUUURRU",
+          "UUURRRRU"
+        ],
+        [
+          "RRUUURUR",
+          "RRUUUURR"
+        ],
+        [
+          "RRUUURUR",
+          "UUURRRUR"
+        ],
+        [
+          "RRUUUURR",
+          "UUUURRRR"
+        ],
+        [
+          "RURRRUUU",
+          "RRRRUUUU"
+        ],
+        [
+          "RURRURUU",
+          "RRRUURUU"
+        ],
+        [
+          "RURRURUU",
+          "RURRRUUU"
+        ],
+        [
+          "RURRUURU",
+          "RRRUUURU"
+        ],
+        [
+          "RURRUURU",
+          "RURRRUUU"
+        ],
+        [
+          "RURRUUUR",
+          "RRRUUUUR"
+        ],
+        [
+          "RURURRUU",
+          "RRUURRUU"
+        ],
+        [
+          "RURURRUU",
+          "RURRRUUU"
+        ],
+        [
+          "RURURURU",
+          "RRUURURU"
+        ],
+        [
+          "RURURURU",
+          "RURRUURU"
+        ],
+        [
+          "RURURURU",
+          "RURURRUU"
+        ],
+        [
+          "RURURUUR",
+          "RRUURUUR"
+        ],
+        [
+          "RURURUUR",
+          "RURRUUUR"
+        ],
+        [
+          "RURUURRU",
+          "RRUUURRU"
+        ],
+        [
+          "RURUURRU",
+          "RURRRUUU"
+        ],
+        [
+          "RURUURUR",
+          "RRUUURUR"
+        ],
+        [
+          "RURUURUR",
+          "RURUUURR"
+        ],
+        [
+          "RURUUURR",
+          "RRUUUURR"
+        ],
+        [
+          "RUURRRUU",
+          "RRRRUUUU"
+        ],
+        [
+          "RUURRRUU",
+          "UURRRRUU"
+        ],
+        [
+          "RUURRURU",
+          "RRRUUURU"
+        ],
+        [
+          "RUURRURU",
+          "RUURRRUU"
+        ],
+        [
+          "RUURRURU",
+          "UURRRURU"
+        ],
+        [
+          "RUURRUUR",
+          "RRRUUUUR"
+        ],
+        [
+          "RUURRUUR",
+          "RUUUURRR"
+        ],
+        [
+          "RUURRUUR",
+          "UURRRUUR"
+        ],
+        [
+          "RUURURRU",
+          "RUUURRRU"
+        ],
+        [
+          "RUURURRU",
+          "UURRURRU"
+        ],
+        [
+          "RUURURUR",
+          "RUURUURR"
+        ],
+        [
+          "RUURURUR",
+          "RUUURRUR"
+        ],
+        [
+          "RUURURUR",
+          "UURRURUR"
+        ],
+        [
+          "RUURUURR",
+          "RUUUURRR"
+        ],
+        [
+          "RUURUURR",
+          "UURRUURR"
+        ],
+        [
+          "RUUURRRU",
+          "RRRRUUUU"
+        ],
+        [
+          "RUUURRRU",
+          "UUURRRRU"
+        ],
+        [
+          "RUUURRUR",
+          "RUUUURRR"
+        ],
+        [
+          "RUUURRUR",
+          "UUURRRUR"
+        ],
+        [
+          "RUUURURR",
+          "RUUUURRR"
+        ],
+        [
+          "RUUURURR",
+          "UUURRURR"
+        ],
+        [
+          "RUUUURRR",
+          "UUUURRRR"
+        ],
+        [
+          "URRRRUUU",
+          "RRRRUUUU"
+        ],
+        [
+          "URRRURUU",
+          "RRRUURUU"
+        ],
+        [
+          "URRRURUU",
+          "URRRRUUU"
+        ],
+        [
+          "URRRUURU",
+          "RRRUUURU"
+        ],
+        [
+          "URRRUURU",
+          "URRRRUUU"
+        ],
+        [
+          "URRRUUUR",
+          "RRRUUUUR"
+        ],
+        [
+          "URRRUUUR",
+          "UUUURRRR"
+        ],
+        [
+          "URRURRUU",
+          "RRUURRUU"
+        ],
+        [
+          "URRURRUU",
+          "URRRRUUU"
+        ],
+        [
+          "URRURURU",
+          "RRUURURU"
+        ],
+        [
+          "URRURURU",
+          "URRRUURU"
+        ],
+        [
+          "URRURURU",
+          "URRURRUU"
+        ],
+        [
+          "URRURUUR",
+          "RRUURUUR"
+        ],
+        [
+          "URRURUUR",
+          "URRRUUUR"
+        ],
+        [
+          "URRUURRU",
+          "RRUUURRU"
+        ],
+        [
+          "URRUURRU",
+          "URRRRUUU"
+        ],
+        [
+          "URRUURRU",
+          "UUURRRRU"
+        ],
+        [
+          "URRUURUR",
+          "RRUUURUR"
+        ],
+        [
+          "URRUURUR",
+          "URRUUURR"
+        ],
+        [
+          "URRUURUR",
+          "UUURRRUR"
+        ],
+        [
+          "URRUUURR",
+          "RRUUUURR"
+        ],
+        [
+          "URRUUURR",
+          "UUUURRRR"
+        ],
+        [
+          "URURRRUU",
+          "UURRRRUU"
+        ],
+        [
+          "URURRURU",
+          "URURRRUU"
+        ],
+        [
+          "URURRURU",
+          "UURRRURU"
+        ],
+        [
+          "URURRUUR",
+          "URUUURRR"
+        ],
+        [
+          "URURRUUR",
+          "UURRRUUR"
+        ],
+        [
+          "URURURRU",
+          "URUURRRU"
+        ],
+        [
+          "URURURRU",
+          "UURRURRU"
+        ],
+        [
+          "URURURUR",
+          "URURUURR"
+        ],
+        [
+          "URURURUR",
+          "URUURRUR"
+        ],
+        [
+          "URURURUR",
+          "UURRURUR"
+        ],
+        [
+          "URURUURR",
+          "URUUURRR"
+        ],
+        [
+          "URURUURR",
+          "UURRUURR"
+        ],
+        [
+          "URUURRRU",
+          "UUURRRRU"
+        ],
+        [
+          "URUURRUR",
+          "URUUURRR"
+        ],
+        [
+          "URUURRUR",
+          "UUURRRUR"
+        ],
+        [
+          "URUURURR",
+          "URUUURRR"
+        ],
+        [
+          "URUURURR",
+          "UUURRURR"
+        ],
+        [
+          "URUUURRR",
+          "UUUURRRR"
+        ],
+        [
+          "UURRRRUU",
+          "RRRRUUUU"
+        ],
+        [
+          "UURRRURU",
+          "RRRUUURU"
+        ],
+        [
+          "UURRRURU",
+          "UURRRRUU"
+        ],
+        [
+          "UURRRUUR",
+          "RRRUUUUR"
+        ],
+        [
+          "UURRRUUR",
+          "UUUURRRR"
+        ],
+        [
+          "UURRURRU",
+          "UUURRRRU"
+        ],
+        [
+          "UURRURUR",
+          "UURRUURR"
+        ],
+        [
+          "UURRURUR",
+          "UUURRRUR"
+        ],
+        [
+          "UURRUURR",
+          "UUUURRRR"
+        ],
+        [
+          "UURURRRU",
+          "RRRURUUU"
+        ],
+        [
+          "UURURRRU",
+          "UUURRRRU"
+        ],
+        [
+          "UURURRUR",
+          "UURUURRR"
+        ],
+        [
+          "UURURRUR",
+          "UUURRRUR"
+        ],
+        [
+          "UURURURR",
+          "UURUURRR"
+        ],
+        [
+          "UURURURR",
+          "UUURRURR"
+        ],
+        [
+          "UURUURRR",
+          "UUUURRRR"
+        ],
+        [
+          "UUURRRRU",
+          "RRRRUUUU"
+        ],
+        [
+          "UUURRRUR",
+          "UUUURRRR"
+        ],
+        [
+          "UUURRURR",
+          "UUUURRRR"
+        ],
+        [
+          "UUURURRR",
+          "UUUURRRR"
+        ]
+      ],
+      "mixed_two_dot_counts": {
+        "RRRRUUUU": 64,
+        "RRRURUUU": 58,
+        "RRRUURUU": 54,
+        "RRRUUURU": 52,
+        "RRRUUUUR": 52,
+        "RRURRUUU": 54,
+        "RRURURUU": 50,
+        "RRURUURU": 48,
+        "RRURUUUR": 48,
+        "RRUURRUU": 48,
+        "RRUURURU": 46,
+        "RRUURUUR": 46,
+        "RRUUURRU": 46,
+        "RRUUURUR": 46,
+        "RRUUUURR": 48,
+        "RURRRUUU": 52,
+        "RURRURUU": 48,
+        "RURRUURU": 46,
+        "RURRUUUR": 46,
+        "RURURRUU": 46,
+        "RURURURU": 44,
+        "RURURUUR": 44,
+        "RURUURRU": 44,
+        "RURUURUR": 44,
+        "RURUUURR": 46,
+        "RUURRRUU": 46,
+        "RUURRURU": 44,
+        "RUURRUUR": 44,
+        "RUURURRU": 44,
+        "RUURURUR": 44,
+        "RUURUURR": 46,
+        "RUUURRRU": 46,
+        "RUUURRUR": 46,
+        "RUUURURR": 48,
+        "RUUUURRR": 52,
+        "URRRRUUU": 52,
+        "URRRURUU": 48,
+        "URRRUURU": 46,
+        "URRRUUUR": 46,
+        "URRURRUU": 46,
+        "URRURURU": 44,
+        "URRURUUR": 44,
+        "URRUURRU": 44,
+        "URRUURUR": 44,
+        "URRUUURR": 46,
+        "URURRRUU": 46,
+        "URURRURU": 44,
+        "URURRUUR": 44,
+        "URURURRU": 44,
+        "URURURUR": 44,
+        "URURUURR": 46,
+        "URUURRRU": 46,
+        "URUURRUR": 46,
+        "URUURURR": 48,
+        "URUUURRR": 52,
+        "UURRRRUU": 48,
+        "UURRRURU": 46,
+        "UURRRUUR": 46,
+        "UURRURRU": 46,
+        "UURRURUR": 46,
+        "UURRUURR": 48,
+        "UURURRRU": 48,
+        "UURURRUR": 48,
+        "UURURURR": 50,
+        "UURUURRR": 54,
+        "UUURRRRU": 52,
+        "UUURRRUR": 52,
+        "UUURRURR": 54,
+        "UUURURRR": 58,
+        "UUUURRRR": 64
+      }
+    }
+  }
+}

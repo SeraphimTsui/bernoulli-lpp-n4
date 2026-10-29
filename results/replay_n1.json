@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "implementation": "independent lattice DP optimum plus direct grid-entry sums for every path",
+  "n": 1,
+  "vertices": 4,
+  "free_vertices": 2,
+  "endpoint_weights": 0,
+  "path_count": 2,
+  "free_vertex_order": "row-major y then x, omitting (0,0) and (n,n)",
+  "path_order": "lexicographic R < U",
+  "all_ties_counted": true,
+  "start_mask": 0,
+  "stop_mask_exclusive": 4,
+  "full_configuration_count": 4,
+  "started_utc": "2026-10-29T01:19:28.362Z",
+  "completed_utc": "2026-10-29T01:19:28.363Z",
+  "wall_seconds": 0.000012199999999999988,
+  "cpu_seconds": 0,
+  "peak_rss_bytes": 38445056,
+  "node_version": "v24.19.0",
+  "script_sha256": "1681114033680af688fea750f4e39babf84269a9533b8c548ffb938aeb357bf2",
+  "checks": {
+    "complete": true,
+    "every_configuration_has_geodesic": true,
+    "no_path_exceeds_dp_optimum": true,
+    "layer_total": true,
+    "binomial_layers": true,
+    "coefficient_bounds": true,
+    "endpoint_columns": true,
+    "diagonal_reflection": true,
+    "central_reversal": true,
+    "n1_hand_result": true
+  },
+  "layers": [
+    1,
+    2,
+    1
+  ],
+  "unique_configurations": 2,
+  "all_tied_configurations": 2,
+  "tie_histogram": [
+    0,
+    2,
+    2
+  ],
+  "counts": {
+    "RU": [
+      1,
+      1,
+      1
+    ],
+    "UR": [
+      1,
+      1,
+      1
+    ]
+  }
+}

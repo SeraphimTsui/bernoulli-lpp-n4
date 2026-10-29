@@ -1,0 +1,79 @@
+B1 independent exact counting replay
+Date: 2026-10-29 (Asia/Shanghai)
+Scope: n=1,2,3,4 only; all configurations, all paths, all maximizing ties.
+Author/reviewer status: independently implemented by an AI subagent; no human peer review and no proof-assistant formal verification.
+
+Method and independence
+The script src/replay_dp.js was written without reading the main enumerator's key comparison code or importing its path data. Its only shared specification is the mathematical model, row-major free-vertex order, and lexicographic path-word convention R<U. It recursively generates all up/right words and stores lists of grid indices. Each configuration is unpacked into individual 0/1 grid entries. The maximum is found by the row-major lattice recurrence
+  D(x,y) = w(x,y) + max(D(x-1,y),D(x,y-1)),
+with the unique available predecessor on the boundary. For each word, its grid entries are added directly and compared to D(n,n). The code has no path-mask population count or path-derived maximum. Every equality increments that path's integer counter. Uint32 counters are sufficient since the complete configuration count is at most 8,388,608 < 2^32. Grid scores are at most 7 for n=4 after endpoints are removed, and fit the Uint8 arrays.
+
+Endpoint omission
+Every path contains both endpoints; replacing their weights by zero subtracts the same quantity from every path score and therefore preserves all maximizing ties. The free-bit labelling is row-major y then x with those two cells removed. All intermediate row-major cells are consecutive, so grid index = bit index+1.
+
+Complete replay coverage
+n=1: 4 configurations, 2 paths; n=2: 128 configurations, 6 paths;
+n=3: 16,384 configurations, 20 paths; n=4: 8,388,608 configurations, 70 paths.
+Each configuration is visited exactly once by the integer loop [0,2^m). Every configuration is required to have at least one maximizing word, and no word may exceed the DP optimum.
+
+Validation
+All complete runs passed: exact configuration layer totals binomial(m,k), total configuration count, 0<=C[word,k]<=binomial(m,k), C[word,0]=C[word,m]=1, diagonal reflection R<->U, and central reversal of word order. For n=1, both rows are [1,1,1], matching the hand event X>=Y with independent Bernoulli X,Y and probability 1-p+p^2.
+For n=2 the three symmetry classes have rows:
+ RRUU: [1,3,11,13,17,8,4,1]
+ RURU: [1,3,9,11,13,8,4,1]
+ RUUR: [1,3,9,12,14,8,4,1].
+An independent symbolic hand derivation of all three rows is given below; it was obtained after the replay, without the main enumerator's comparison code.
+
+Budget and runtime
+A 65,536-configuration n=4 benchmark took 0.0393515 wall seconds and 0.046 CPU seconds. Full n=4 replay took 4.5631551 wall seconds and 4.500 CPU seconds, using Node v24.19.0. Smaller full runs took <0.007 wall seconds each; CPU timing resolution reported 0 for those runs. One preliminary benchmark failed because a generic assertion incorrectly treated the descriptive complete=false field as an invariant failure; the guard was corrected and all outputs regenerated. No counting or DP logic changed. The benchmark receipt is retained and explicitly incomplete.
+
+Reproduction
+Run from any directory with Node.js:
+  node <project>/src/replay_dp.js 1
+  node <project>/src/replay_dp.js 2
+  node <project>/src/replay_dp.js 3
+  node <project>/src/replay_dp.js 4
+Optional last argument limits configurations for a benchmark; an incomplete run writes *_benchmark.json and sets checks.complete=false. The hard scope rejects n outside 1..4. Results contain timing, CPU, memory, implementation version, source hash, coefficients, binomial layers, and the distribution of numbers of tied paths.
+
+SHA256 of delivered source/results
+src/replay_dp.js: 1681114033680AF688FEA750F4E39BABF84269A9533B8C548FFB938AEB357BF2
+results/replay_n1.json: 1F6576B7C188C8AF9154A158BC14C5C43B4D57B0E137F8CFE82DBA2D01C0B61A
+results/replay_n2.json: DD72EC3FB2ED9DCC7C6734A6415CD161A502061D6F9E9AE4DDDEAE140299C49C
+results/replay_n3.json: 595DD35A14B24EE0B05DF2B79B6C3D870BE33E197CE47CF0431BCB0635E8D0DF
+results/replay_n4.json: 8E815566BC1D508B65E5C147DDB6C59EC8BF811123083A9E3C2EA097ED8B4517
+
+These JSON hashes include timestamps/timings and will change on rerun even if all mathematical arrays agree. Mathematical comparison must compare counts and layers, not require byte-identical receipts.
+
+Limitations
+This replay certifies coefficients by complete finite computation under the explicit model. It does not on its own audit the legal-move definitions, prove the sign of every move difference, establish novelty, address n>=5, or constitute human peer review/formal verification. Nothing has been submitted, publicly released, or sent to external parties.
+
+Main-versus-independent comparison
+Compared every coefficient in results/counts_n1.json through counts_n4.json against the corresponding independent table, matching by the complete path word, after both implementations finished. All 6+48+300+1680=2034 integer entries agree. Both implementations report complete enumeration at each n. Comparison receipts, including hashes of both inputs, are in results/replay_n1_to_n4_comparison.json. This is complete coefficient agreement, not sampling.
+
+Hand derivation for all n=2 symmetry classes
+Let the seven free vertex weights be a=w(1,0), b=w(2,0), c=w(0,1), d=w(1,1), e=w(2,1), f=w(0,2), g=w(1,2). The six path weights are
+  RRUU: a+b+e; RURU: a+d+e; RUUR: a+d+g;
+  URRU: c+d+e; URUR: c+d+g; UURR: c+f+g.
+Use the ordinary counting variable t: G_word(t)=sum_configuration 1{word is maximal} t^(number of ones). Define Q=1+t+t^2 (an ordered binary pair x>=y), and E=1+t^2 (an equal binary pair). Once G is obtained, the Bernoulli probability is (1-p)^7 G(p/(1-p)) for 0<=p<1, with continuous extension at 1.
+
+Staircase RURU.
+Necessary comparisons give d>=b, e>=g, a>=c. These imply the remaining middle-path comparison. The remaining corner comparison is a+d+e>=c+f+g, or d+(a-c)+(e-g)>=f. Under the three ordered-pair constraints, this fails exactly when d=b=0, a=c, e=g, and f=1. Therefore
+  G_RURU=(1+t)Q^3 - t E^2
+         =1+3t+9t^2+11t^3+13t^4+8t^5+4t^6+t^7.
+
+Crossing path RUUR.
+Middle-path comparisons reduce to a>=c and g>=e. Write u=a-c>=0 and v=g-e>=0. The two corner comparisons become d+v>=b and d+u>=f. If d=1, both hold for arbitrary b,f, contributing t(1+t)^2 Q^2. If d=0, one pair together with its constrained outer variable contributes E+t(1+t)=1+t+2t^2; the two such choices are independent. Consequently
+  G_RUUR=t(1+t)^2 Q^2 +(1+t+2t^2)^2
+         =1+3t+9t^2+12t^3+14t^4+8t^5+4t^6+t^7.
+
+Corner path RRUU.
+The same-row competitor imposes b>=d. Split the three possibilities.
+(b,d)=(1,1): the other comparisons reduce to a>=c,e>=g, with f arbitrary. Contribution t^2(1+t)Q^2.
+(b,d)=(0,0): require a>=c,e>=g and (a-c)+(e-g)>=f. Contribution (1+t)Q^2-t E^2.
+(b,d)=(1,0): all middle comparisons are automatic or follow from a+1+e>=c+f+g, so it remains only this inequality. For A=a+e and B=c+f+g, it is B<=A+1. Its generating polynomial is
+  H=sum_{A=0}^2 binomial(2,A)t^A sum_{B=0}^{min(3,A+1)} binomial(3,B)t^B
+   =1+5t+7t^2+9t^3+3t^4+t^5.
+Including the weight t of b=1, this contribution is tH. Hence
+  G_RRUU=(1+t)(1+t^2)Q^2-t E^2+tH
+         =1+3t+11t^2+13t^3+17t^4+8t^5+4t^6+t^7.
+Reflections and central reversal give the other three rows. This hand calculation verifies all 48 n=2 entries. It also shows G_RRUU-G_RURU=2t^2+2t^3+4t^4 and G_RRUU-G_RUUR=2t^2+t^3+3t^4, strictly positive for t>0; any assertion that these are legal source moves is separately controlled by the move-definition audit.

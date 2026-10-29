@@ -1,0 +1,117 @@
+{
+  "project_id": "B1",
+  "access_date": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "search_query_count": 15,
+  "identical_result_located": false,
+  "novelty_status": "unestablished_bounded_negative_search",
+  "forward_citation_coverage": "incomplete_due_to_access_failures",
+  "sources": [
+    {
+      "id": "MN2026v2",
+      "authors": [
+        "Sam McKeown",
+        "Shuta Nakajima"
+      ],
+      "title": "On the most likely geodesic in last passage percolation",
+      "version": "arXiv:2608.11378v2",
+      "version_date": "2026-09-20",
+      "latest_listed_version_verified": true,
+      "url": "https://arxiv.org/abs/2608.11378",
+      "text_url": "https://arxiv.org/html/2608.11378v2",
+      "locations": [
+        "Section 1 maximizing-set definition",
+        "Section 2 Monotonicity of path probabilities",
+        "Figures 3 and 4",
+        "Theorem 3 equation (6)",
+        "Remark 1",
+        "Section 5 Lemmas 6-9 and proof of Theorem 3"
+      ],
+      "scope_difference": "All n at small p; finite n=4 all p is not supplied in inspected material.",
+      "derived_p4_threshold": "1/18400",
+      "excluded_old_problem": "v1 moderate-deviation assumption resolved in v2 Appendix C"
+    },
+    {
+      "id": "Nakajima_publications",
+      "url": "https://njimamath.github.io/Homepage/Publication/index.html",
+      "status": "accessed",
+      "finding": "Paper entry links to arXiv; no code or certificate attachment beside that entry. Not proof of absence elsewhere."
+    },
+    {
+      "id": "McKeown_homepage",
+      "url": "https://people.math.wisc.edu/~smckeown2/",
+      "status": "HTTP_403",
+      "finding": "Search excerpt available but dated October 2025; current attachments not verified."
+    },
+    {
+      "id": "NUS_seminar_20260909",
+      "url": "https://www.math.nus.edu.sg/category/events/colloquia-seminars/probability/",
+      "status": "institutional_search_result_inspected",
+      "finding": "Talk on same project; available abstract gives no finite exact certificate."
+    },
+    {
+      "id": "AC2021",
+      "authors": [
+        "Tom Alberts",
+        "Eric Cator"
+      ],
+      "title": "On the Passage Time Geometry of the Last Passage Percolation Problem",
+      "version": "ALEA 18 (2021), 211-247",
+      "doi": "10.30757/ALEA.v18-10",
+      "url": "https://alea.impa.br/articles/v18/18-10.pdf",
+      "locations": [
+        "Abstract and model description",
+        "Section 8 pp.242-244: Most Likely Paths and Monotonicity of the Path Measure"
+      ],
+      "scope_difference": "Cone geometry and open question about a geometric partial ordering; no later bump/unwind finite certificate in inspected relevant sections.",
+      "full_paper_exhaustive_exclusion_claimed": false
+    },
+    {
+      "id": "ABGS2025",
+      "authors": [
+        "Tom Alberts",
+        "Riddhipratim Basu",
+        "Sean Groathouse",
+        "Xiao Shen"
+      ],
+      "title": "Large deviations of geodesic midpoint fluctuations in last-passage percolation with general i.i.d. weights",
+      "version": "arXiv:2502.00942v1",
+      "version_date": "2025-02-02",
+      "url": "https://arxiv.org/abs/2502.00942",
+      "locations": [
+        "Abstract",
+        "Version metadata"
+      ],
+      "scope_difference": "Asymptotic midpoint deviations and exponential-weight corner-path asymptotic; not finite all-p Bernoulli ordering.",
+      "full_paper_exhaustive_exclusion_claimed": false
+    }
+  ],
+  "citation_index_attempts": [
+    {
+      "url": "https://api.semanticscholar.org/arXiv%3A2608.11378",
+      "status": "redirect_target_inaccessible",
+      "target": "https://www.semanticscholar.org/paper/c200d4ac5e937ce3a08d7f0f9d61c467701ad666"
+    },
+    {
+      "url": "https://scholar.google.com/scholar_lookup?arxiv_id=2608.11378",
+      "status": "HTTP_429"
+    },
+    {
+      "url": "https://ui.adsabs.harvard.edu/abs/arXiv%3A2608.11378",
+      "status": "HTTP_405"
+    }
+  ],
+  "publication": {
+    "submitted": false,
+    "uploaded": false,
+    "publicly_released": false,
+    "external_messages_sent": false
+  },
+  "boundaries": [
+    "No exhaustive global novelty claim",
+    "No current complete forward-citation list",
+    "No human peer-review claim",
+    "No significance guarantee",
+    "No author contact"
+  ]
+}
