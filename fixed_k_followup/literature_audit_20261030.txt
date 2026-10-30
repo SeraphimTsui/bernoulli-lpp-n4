@@ -1,0 +1,42 @@
+Fixed-three-site infinite family: bounded prior-work audit
+Access date 2026-10-30 (Asia/Shanghai). This audit does not establish priority.
+
+McKeown and Nakajima, On the most likely geodesic in last passage percolation,
+arXiv:2608.11378v2, 20 September 2026:
+https://arxiv.org/abs/2608.11378
+https://arxiv.org/html/2608.11378v2
+Latest arXiv version page inspected 2026-10-30 still lists v2. Section2 defines
+the operation and conjectures the independent Bernoulli path ordering. Theorem3,
+equation6 and Section5 prove the ordering for small p; Lemma9 concerns the two-
+dot contribution. The v2 paper is not an all-cardinality comparison theorem.
+Inspected relevant source sections do not give the present fixed-three-site
+parametric formula. This comparison is not an exhaustive search of all papers.
+
+Alberts and Cator, On the Passage Time Geometry of the Last Passage Percolation
+Problem, ALEA18 (2021), 211-247, https://alea.impa.br/articles/v18/18-10.pdf,
+Section8 pp242-244: background on most likely paths and geometric ordering.
+The relevant sections do not supply the specified path-pair formula. Full
+implication testing against all their general cone results has not been done.
+
+Earlier self-publication https://github.com/SeraphimTsui/bernoulli-lpp-n4,
+manuscript Section4.1: n=4 fixed-three-free-sites example already recorded,
+delta=-2/1771. The present contribution is the explicit analytic extension
+to the specified family of paths for every n>=4; treating the n4 case alone
+as new would be incorrect. The repository has not been updated with this draft.
+
+Additional queries on 2026-10-30, beyond the eight recorded in research progress:
+  "last passage percolation" "three" "geodesic" "monotonicity" Bernoulli
+  "last passage" "fixed cardinality" geodesic path monotonicity
+  "geodesic" Bernoulli "unwinding" fixed sites paths
+  "RUURUUURRR" geodesic
+No matching primary source surfaced among returned results. Irrelevant uses of
+geodesic and the Pith AI review of superseded v1 were not used as evidence.
+Previous search logs record further terms and failed citation-index accesses.
+Incomplete forward citations, unpublished material, alternate wording and
+general results that imply the formula remain possible. Do not assert first
+discovery, originality of the counting methods, or publication significance.
+
+Assessment: mathematically explicit, modest infinite-family statement; exact
+priority and independent research significance unestablished. Source move
+interpretation is documented; the selected l=0,k=2 is nondegenerate and does
+not rely on the source's empty-excursion ambiguity.

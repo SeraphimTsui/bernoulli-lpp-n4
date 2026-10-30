@@ -44,7 +44,7 @@ python src/certify.py
 
 Run without Python's `-O` flag because assertions are executable checks.
 Counters are exact integers. The original two n4 runs used5.890 CPU seconds
-combined; runtime depends on hardware. No n5 computation is included.
+combined; runtime depends on hardware. No full n5 Bernoulli enumeration is included in the original finite study.
 Timing receipts change on rerun; mathematical arrays must agree exactly.
 
 Compile the manuscript with TeX Live:
@@ -71,3 +71,17 @@ No person or institution is claimed as manuscript author.
 
 No journal or arXiv submission is represented by this GitHub deposit.
 No reuse license has been selected; public visibility alone is not a license grant.
+
+## Fixed-cardinality follow-up (30 October 2026)
+
+[Follow-up PDF](fixed_k_followup/manuscript/build/main.pdf) ·
+[Research and reproduction files](fixed_k_followup/README.md)
+
+For every n >= 4, the displayed legal boundary unwind decreases the number
+of optimal configurations with exactly three occupied nonendpoint sites by
+`-(5*n^2 - 27*n + 32)/2`. This is an analytically proved infinite family for
+the fixed-cardinality ensemble, **not a disproof of the independent Bernoulli
+conjecture**. The follow-up includes separate finite checks through n=11 and
+geometry checks through n=30. Priority, human peer review and Lean verification
+remain incomplete; the independent Bernoulli conjecture for general n is open
+in this work.

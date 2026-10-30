@@ -1,0 +1,16 @@
+{
+  "n": 5,
+  "k": 3,
+  "configurations": 5984,
+  "paths": 252,
+  "rows_all_match": true,
+  "all_operation_witnesses_match": true,
+  "move_witnesses": 560,
+  "negative_witnesses": 12,
+  "negative_by_kind": {
+    "bump": 4,
+    "unwind": 8
+  },
+  "minimum_delta": -11,
+  "scope": "Complete three-ones layer; not all 2^34 configurations, not all-p proof."
+}

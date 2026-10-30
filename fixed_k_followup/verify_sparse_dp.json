@@ -1,0 +1,152 @@
+{
+  "method": "independently written sparse rank-DP on three sites and direct path masks",
+  "scope": "Every k=3 configuration for n=4,...,11; no all-p or full 2^m enumeration",
+  "results": [
+    {
+      "n": 4,
+      "configurations": 1771,
+      "counts": [
+        309,
+        307
+      ],
+      "delta": -2,
+      "decomposition": {
+        "one_local_one_common": 0,
+        "one_local_no_common": -3,
+        "one_local_two_common": 0,
+        "two_local": 1,
+        "three_local": 0,
+        "zero_local": 0
+      },
+      "all_terms_match_derived_formulas": true
+    },
+    {
+      "n": 5,
+      "configurations": 5984,
+      "counts": [
+        864,
+        853
+      ],
+      "delta": -11,
+      "decomposition": {
+        "one_local_one_common": -6,
+        "one_local_no_common": -6,
+        "one_local_two_common": 0,
+        "two_local": 1,
+        "three_local": 0,
+        "zero_local": 0
+      },
+      "all_terms_match_derived_formulas": true
+    },
+    {
+      "n": 6,
+      "configurations": 16215,
+      "counts": [
+        2010,
+        1985
+      ],
+      "delta": -25,
+      "decomposition": {
+        "one_local_one_common": -16,
+        "one_local_no_common": -10,
+        "one_local_two_common": 0,
+        "two_local": 1,
+        "three_local": 0,
+        "zero_local": 0
+      },
+      "all_terms_match_derived_formulas": true
+    },
+    {
+      "n": 7,
+      "configurations": 37820,
+      "counts": [
+        4122,
+        4078
+      ],
+      "delta": -44,
+      "decomposition": {
+        "one_local_one_common": -30,
+        "one_local_no_common": -15,
+        "one_local_two_common": 0,
+        "two_local": 1,
+        "three_local": 0,
+        "zero_local": 0
+      },
+      "all_terms_match_derived_formulas": true
+    },
+    {
+      "n": 8,
+      "configurations": 79079,
+      "counts": [
+        7707,
+        7639
+      ],
+      "delta": -68,
+      "decomposition": {
+        "one_local_one_common": -48,
+        "one_local_no_common": -21,
+        "one_local_two_common": 0,
+        "two_local": 1,
+        "three_local": 0,
+        "zero_local": 0
+      },
+      "all_terms_match_derived_formulas": true
+    },
+    {
+      "n": 9,
+      "configurations": 152096,
+      "counts": [
+        13424,
+        13327
+      ],
+      "delta": -97,
+      "decomposition": {
+        "one_local_one_common": -70,
+        "one_local_no_common": -28,
+        "one_local_two_common": 0,
+        "two_local": 1,
+        "three_local": 0,
+        "zero_local": 0
+      },
+      "all_terms_match_derived_formulas": true
+    },
+    {
+      "n": 10,
+      "configurations": 273819,
+      "counts": [
+        22104,
+        21973
+      ],
+      "delta": -131,
+      "decomposition": {
+        "one_local_one_common": -96,
+        "one_local_no_common": -36,
+        "one_local_two_common": 0,
+        "two_local": 1,
+        "three_local": 0,
+        "zero_local": 0
+      },
+      "all_terms_match_derived_formulas": true
+    },
+    {
+      "n": 11,
+      "configurations": 467180,
+      "counts": [
+        34770,
+        34600
+      ],
+      "delta": -170,
+      "decomposition": {
+        "one_local_one_common": -126,
+        "one_local_no_common": -45,
+        "one_local_two_common": 0,
+        "two_local": 1,
+        "three_local": 0,
+        "zero_local": 0
+      },
+      "all_terms_match_derived_formulas": true
+    }
+  ],
+  "cpu_seconds": 2.84375,
+  "script_sha256": "ed765c811ad5397907e5be19aea8ded09b31cd5733d5425e977061959a2d85ae"
+}

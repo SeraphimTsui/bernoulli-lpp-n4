@@ -1,0 +1,90 @@
+[
+  {
+    "n": 4,
+    "source": "RUURUURR",
+    "target": "UURRUURR",
+    "counts": [
+      309,
+      307
+    ],
+    "delta": -2,
+    "candidate_formula": -2
+  },
+  {
+    "n": 5,
+    "source": "RUURUUURRR",
+    "target": "UURRUUURRR",
+    "counts": [
+      864,
+      853
+    ],
+    "delta": -11,
+    "candidate_formula": -11
+  },
+  {
+    "n": 6,
+    "source": "RUURUUUURRRR",
+    "target": "UURRUUUURRRR",
+    "counts": [
+      2010,
+      1985
+    ],
+    "delta": -25,
+    "candidate_formula": -25
+  },
+  {
+    "n": 7,
+    "source": "RUURUUUUURRRRR",
+    "target": "UURRUUUUURRRRR",
+    "counts": [
+      4122,
+      4078
+    ],
+    "delta": -44,
+    "candidate_formula": -44
+  },
+  {
+    "n": 8,
+    "source": "RUURUUUUUURRRRRR",
+    "target": "UURRUUUUUURRRRRR",
+    "counts": [
+      7707,
+      7639
+    ],
+    "delta": -68,
+    "candidate_formula": -68
+  },
+  {
+    "n": 9,
+    "source": "RUURUUUUUUURRRRRRR",
+    "target": "UURRUUUUUUURRRRRRR",
+    "counts": [
+      13424,
+      13327
+    ],
+    "delta": -97,
+    "candidate_formula": -97
+  },
+  {
+    "n": 10,
+    "source": "RUURUUUUUUUURRRRRRRR",
+    "target": "UURRUUUUUUUURRRRRRRR",
+    "counts": [
+      22104,
+      21973
+    ],
+    "delta": -131,
+    "candidate_formula": -131
+  },
+  {
+    "n": 11,
+    "source": "RUURUUUUUUUUURRRRRRRRR",
+    "target": "UURRUUUUUUUUURRRRRRRRR",
+    "counts": [
+      34770,
+      34600
+    ],
+    "delta": -170,
+    "candidate_formula": -170
+  }
+]

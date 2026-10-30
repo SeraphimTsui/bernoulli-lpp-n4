@@ -1,0 +1,330 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,geometry,microtype}
+\usepackage[hidelinks]{hyperref}
+\geometry{margin=27mm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\R}{\mathrm R}
+\newcommand{\U}{\mathrm U}
+\newcommand{\Prob}{\mathbb P}
+\title{An infinite family of fixed-cardinality counterexamples\\
+to geodesic-probability monotonicity}
+\author{Unsigned research draft}
+\date{30 October 2026\\\small Public research draft; not peer reviewed}
+\begin{document}
+\maketitle
+\begin{abstract}
+For every integer $n\geq4$, we construct two up/right paths on the
+$(n+1)\times(n+1)$ vertex grid, the second obtained from the first by a
+boundary unwinding move. Exactly three nonendpoint vertices are selected
+uniformly and assigned weight one; every other nonendpoint vertex has
+weight zero. All tied maximizing paths count as geodesics. We prove by
+elementary classification that the number of three-point configurations
+making the unwound path optimal, minus the corresponding number for the
+original path, is $-(5n^2-27n+32)/2$. The difference is strictly
+negative for every $n\geq4$. Thus the fixed-cardinality analogue of a
+path-probability ordering fails in arbitrarily large squares. This is
+\emph{not} a counterexample to the independent Bernoulli all-parameter
+conjecture: conditioning on the total number of occupied sites changes the
+probability measure. The result extends a previously documented $n=4$
+example to an analytically proved infinite family. Priority and independent
+research significance remain unestablished.
+\end{abstract}
+
+\section{Setting and statement}
+Let $V_n=\{0,\ldots,n\}^2$ and
+$W_n=V_n\setminus\{(0,0),(n,n)\}$. Pick $S$ uniformly from the
+three-element subsets of $W_n$, and assign weight $1$ to its elements
+and weight $0$ to the other nonendpoint vertices. Since every up/right
+path contains the two endpoints, arbitrary common endpoint weights do
+not affect the maximizing set. A path $\gamma$ is a geodesic when its
+score $|S\cap\gamma|$ is at least that of every up/right path; all ties
+are counted.
+
+Let $\R$ and $\U$ denote right and up steps. For $n\ge4$ define
+\[
+ \gamma_n=\R\U^2\R\U^{n-2}\R^{n-2},
+ \qquad
+ \pi_n=\U^2\R^2\U^{n-2}\R^{n-2}.
+\]
+Write $C_\eta(n)$ for the number of three-element sets $S\subset W_n$
+for which $\eta$ is a geodesic.
+
+\begin{theorem}\label{thm:main}
+For every integer $n\ge4$, $\pi_n$ is obtained from $\gamma_n$ by a
+genuine boundary unwinding move as in \cite[Section~2]{MN}, and
+\[
+ C_{\pi_n}(n)-C_{\gamma_n}(n)
+ =-\frac{5n^2-27n+32}{2}<0.
+\]
+Consequently,
+\[
+ \Prob(\pi_n\text{ is a geodesic})-
+ \Prob(\gamma_n\text{ is a geodesic})
+ =-\frac{5n^2-27n+32}
+ {2\binom{(n+1)^2-2}{3}}<0.
+\]
+\end{theorem}
+
+In the signed-run convention of \cite{MN}, the source runs are
+$(-1,2,-1,n-2,-(n-2))$. Their first two partial sums are $-1,1$.
+Taking $l=0,k=2$ reverses the actual excursion prefix
+$\R\U\U$ into $\U\U\R$; the next $\R$ merges with that prefix to give
+$\pi_n$. The move is nonidentity and its interior excursion is nonempty.
+In particular, we do not invoke the vacuous adjacent-corner case in
+the printed definition.
+
+The authors of \cite{MN} propose their ordering for independent
+Bernoulli weights and prove strict monotonicity in a sufficiently small
+positive parameter range. Our theorem concerns the \emph{conditional}
+uniform three-point ensemble, which has dependent weights. It does
+not compare independent Bernoulli probabilities. In particular,
+a negative contribution from one cardinality layer need not determine
+the sign after summing over all layers.
+
+The case $n=4$ was already recorded in our earlier finite computation
+\cite{B1}; it is not presented as a new example here. Our contribution
+within this draft is the elementary analytic extension to the
+specified infinite family, subject to the priority limitations in
+Section~\ref{sec:novelty}.
+
+\section{Reduction to three-point chain geometry}
+Equip the grid with the coordinatewise partial order:
+$(x,y)\leq(x',y')$ when $x\leq x'$ and $y\leq y'$.
+A directed path can contain a set of vertices exactly when that set is
+a chain in this order. Consequently, for a three-point set $S$, the
+largest path score equals the maximum size of a chain contained in $S$.
+This also proves that a path is optimal if and only if its own score
+equals that chain length. No tie-breaking rule is used.
+
+Introduce the four vertices where the two paths differ:
+\[
+ a=(1,0),\quad b=(1,1),\quad c=(0,1),\quad d=(0,2),
+ \qquad
+ L=\{a,b,c,d\}.
+\]
+The free vertices on $\gamma_n$ but not $\pi_n$ are $a,b$; those
+on $\pi_n$ but not $\gamma_n$ are $c,d$. Let $C$ be their common
+nonendpoint path vertices and $D=W_n\setminus(L\cup C)$. Explicitly,
+\[
+ C=\{(1,2)\}\cup\{(2,y):2\le y\le n\}
+          \cup\{(x,n):3\le x\le n-1\}.
+\]
+All vertices in $C$ are above and to the right of all four vertices
+in $L$. The sets $L,C,D$ partition $W_n$.
+
+For each $S$ put
+$\delta(S)=\mathbf 1_{\{\pi_n\text{ is optimal}\}}
+             -\mathbf 1_{\{\gamma_n\text{ is optimal}\}}$.
+The desired count difference is $\sum_{|S|=3}\delta(S)$.
+Classify configurations according to $|S\cap L|$ and, when this equals
+one, according to $|S\cap C|$. The resulting sums are
+\[
+\begin{array}{c|c|r}
+ |S\cap L| & |S\cap C| & \sum\delta(S)\\ \hline
+ 0&\text{any}&0\\
+ 1&0&-\binom{n-1}{2}\\
+ 1&1&2-2(n-3)^2\\
+ 1&2&0\\
+ 2&\text{any}&1\\
+ 3&0&0
+\end{array}
+\tag{2.1}\label{eq:table}
+\]
+We derive each row below. Adding them gives
+\[
+ -\binom{n-1}{2}+2-2(n-3)^2+1
+ =-\frac{5n^2-27n+32}{2}.
+\]
+For $n\ge4$, $5n^2-27n+32=(n-4)(5n-7)+4>0$.
+This proves the numerical and sign assertions in Theorem~\ref{thm:main}.
+
+\section{Proof of the configuration sums}
+\subsection{Zero or three vertices in \texorpdfstring{$L$}{L}}
+When $S\cap L=\varnothing$, both paths visit the same vertices of $S$,
+hence their scores and success indicators agree.
+
+If $S\subseteq L$, all four possible triples have longest chain length
+two. The first two in the table are optimal only for $\gamma_n$, and
+the last two only for $\pi_n$:
+\[
+\begin{array}{c|rrrr}
+ S&\{a,b,c\}&\{a,b,d\}&\{a,c,d\}&\{b,c,d\}\\ \hline
+ \delta(S)&-1&-1&1&1
+\end{array}
+\]
+Their sum is zero.
+
+\subsection{Exactly one vertex in \texorpdfstring{$L$}{L}}
+Suppose first that $S=\{x,h_1,h_2\}$ with $x\in L$ and
+$h_1,h_2\in C$. The two common vertices lie on both paths and the
+local vertex lies on exactly one. That path collects all three ones
+and is necessarily optimal; the other collects two and is not.
+Since two choices of $x$ favor each path, the total difference is zero.
+
+Next suppose $S=\{x,z_1,z_2\}$ with $x\in L$ and $z_1,z_2\in D$.
+Only the path containing $x$ can be optimal, and it is optimal
+exactly when $S$ is a three-point antichain. The counts of unordered
+pairs $\{z_1,z_2\}\subset D$ satisfying this condition are
+\[
+ \begin{array}{c|rrrr}
+ x&a&b&c&d\\ \hline
+ \#&0&(n-2)(n-1)&0&\binom{n-1}{2}
+ \end{array}.
+\]
+Indeed, points in $D$ incomparable with $a$ are in the single
+column $(0,y)$, $3\le y\le n$; points incomparable with $c$ are
+in the single row $(x,0)$, $2\le x\le n$. Each such set is itself
+a chain. For $b$, the incomparable set is the union of that column
+and row, and a pair must take one point from each. For $d$, the
+incomparable points comprise rows $y=0,1$ with $2\le x\le n$;
+an antichain pair takes one from each row with the lower-row point
+strictly to the right. Thus the difference is
+\[
+ 0+\binom{n-1}{2}-0-(n-2)(n-1)
+ =-\binom{n-1}{2}.
+\]
+
+Finally let $S=\{x,h,z\}$ with $x\in L$, $h\in C$, $z\in D$.
+The path containing $x$ collects two ones, the other collects one,
+and the former is optimal exactly when the three vertices do not
+form a chain. For each fixed $h$, the constant numbers of choices
+$z\in D$ cancel between the two positive and two negative choices
+of $x$. Hence the contribution is
+\begin{equation}\label{eq:chains}
+\sum_{h\in C}\sum_{z\in D}
+ \bigl(1_{\{a,h,z\}\ \mathrm{chain}}
+      +1_{\{b,h,z\}\ \mathrm{chain}}
+      -1_{\{c,h,z\}\ \mathrm{chain}}
+      -1_{\{d,h,z\}\ \mathrm{chain}}\bigr).
+\end{equation}
+For every $x\in L$ and $h\in C$, $x\le h$. The triple is a chain
+exactly if $z\le x$, $x\le z\le h$, or $z\ge h$. No vertex of
+$D$ lies below any $x\in L$, and the $z\ge h$ term is independent
+of $x$ and cancels in \eqref{eq:chains}. Only the rectangles remain.
+
+For $h=(h_x,h_y)\in C$, define
+\[
+ T(h)=\sum_{z\in D}
+ \left(1_{a\le z\le h}+1_{b\le z\le h}
+       -1_{c\le z\le h}-1_{d\le z\le h}\right).
+\]
+In the full grid, before deleting $L,C$ and the endpoints, the
+signed rectangle count is
+\[
+ h_x(h_y+1)+h_xh_y-(h_x+1)h_y-(h_x+1)(h_y-1)
+ =2h_x-2h_y+1.
+\]
+Each common-path vertex contributes zero to the signed sum;
+the origin contributes zero, and the terminal endpoint is not in
+any of these rectangles. The four local vertices have signed
+contributions $1,1,-1,-2$, respectively, summing to $-1$.
+Removing them therefore yields
+\[
+ T(h)=2(h_x-h_y+1).
+\]
+Summing over the explicit common-path set gives
+\[
+ \sum_{h\in C}T(h)
+ =2-(n-3)(n-2)-(n-4)(n-3)
+ =2-2(n-3)^2.
+\]
+This proves the remaining one-local-vertex row.
+
+\subsection{Exactly two vertices in \texorpdfstring{$L$}{L}}
+If one of the two vertices is in $\{a,b\}$ and the other is in
+$\{c,d\}$, the paths have the same score. It remains to compare
+$S=\{a,b,z\}$ with $S=\{c,d,z\}$, where $z\in C\cup D$.
+For $z\in C$ the two configurations both contribute success to the
+path containing the local pair, so their total contributions cancel.
+
+For $z\in D$, the path containing the local pair collects two ones
+and is optimal unless the triple is a chain. The unrestricted numbers
+of choices of $z$ again cancel. Let $N_{ab}$ and $N_{cd}$ be the
+numbers of $z\in D$ forming chains with $\{a,b\}$ and $\{c,d\}$.
+All points of $D$ below these local pairs have been excluded. Thus
+\[
+ N_{ab}-N_{cd}
+ =\#\{(x,1):2\le x\le n\}
+  -\#\{(0,y):3\le y\le n\}
+ =(n-1)-(n-2)=1.
+\]
+This is the last nonzero sum in \eqref{eq:table} and completes the proof.
+
+\section{Independent computational checks}
+The analytic argument above is finite symbolic counting, not an
+extrapolation from examples. As a separate check, the supplied
+\path{verify_sparse_dp.py} enumerates every three-point set for
+$n=4,\ldots,11$. For each configuration it computes the longest
+chain using an independently written rank dynamic program on the
+three occupied points, and scores each path using bit masks.
+It verifies the total difference and every row of \eqref{eq:table}.
+It does not enumerate all $2^{(n+1)^2-2}$ environments.
+
+For $n=5$ the saved \path{n5_independent_check.json} also compares
+the complete set of $5{,}984$ three-point environments for all
+$252$ paths, using separate lattice-dynamic-programming and
+point-chain implementations. The two implementations agree on
+every path count; two separately written move generators agree on
+all $560$ move witnesses, of which $12$ have negative difference.
+This is finite implementation evidence, not a proof-assistant
+formalization or a substitute for independent human peer review.
+
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$n$&$C_{\gamma_n}$&$C_{\pi_n}$&difference&three-point environments\\
+\midrule
+4&309&307&$-2$&1,771\\
+5&864&853&$-11$&5,984\\
+6&2,010&1,985&$-25$&16,215\\
+7&4,122&4,078&$-44$&37,820\\
+8&7,707&7,639&$-68$&79,079\\
+\bottomrule
+\end{tabular}
+\end{center}
+See \path{verify_sparse_dp.json} for the full $n=4,\ldots,11$ replay.
+To reproduce the replay, run \texttt{python verify\_sparse\_dp.py} from
+the \path{fixed_k_followup} directory. Python's standard library is
+sufficient. Run without \texttt{-O}, as assertions are part of the checks.
+
+\section{Prior work and limitations}\label{sec:novelty}
+The prior geometric path-order questions and maximizing-path setting
+are discussed by Alberts and Cator \cite[Section~8]{AC}. The specific
+bump/unwind operations and small-parameter Bernoulli result are due to
+McKeown and Nakajima \cite{MN}. The $n=4$ fixed-three-point
+counterexample appears in the earlier finite companion \cite{B1}.
+
+A bounded search for fixed-cardinality geodesic comparisons, the
+explicit path words and the candidate polynomial did not locate the
+same infinite-family formula. The searched sources and access limits
+are recorded in \path{literature_audit_20261030.txt}. Forward citation
+coverage and the global literature review are incomplete, so exact
+priority is not established. Degree elevation, fixed-cardinality
+decomposition and longest-chain counting are standard methods; no
+claim of a new general technique is made.
+
+The proof addresses only the displayed path family and exactly three
+occupied nonendpoint sites. It does not establish the full Bernoulli
+conjecture, classify other fixed-cardinality levels, or claim
+publication-quality significance. This unsigned draft has not been
+human peer reviewed or formally verified. It is deposited as a follow-up in the companion GitHub repository.
+No journal or arXiv submission is represented by that deposit.
+
+\begin{thebibliography}{9}
+\bibitem{MN} S. McKeown and S. Nakajima,
+\emph{On the most likely geodesic in last passage percolation},
+arXiv:2608.11378v2, 20 September 2026,
+\url{https://arxiv.org/html/2608.11378v2}.
+\bibitem{AC} T. Alberts and E. Cator,
+\emph{On the Passage Time Geometry of the Last Passage Percolation Problem},
+ALEA \textbf{18} (2021), 211--247,
+\url{https://alea.impa.br/articles/v18/18-10.pdf}.
+\bibitem{B1} Unsigned finite research draft,
+\emph{An exact all-parameter verification of the bump--unwind path order
+in Bernoulli last-passage percolation for $n=4$},
+2026, Section~4.1,
+\url{https://github.com/SeraphimTsui/bernoulli-lpp-n4}.
+\end{thebibliography}
+\end{document}

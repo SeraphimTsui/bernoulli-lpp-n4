@@ -1,0 +1,15 @@
+{
+  "edition": "2026-10-30 public GitHub deposit",
+  "authorization": "Explicit user instruction to upload on 2026-10-30",
+  "mathematics_unchanged_from_local_draft": true,
+  "five_standard_library_verification_scripts_rerun_successfully": true,
+  "public_pdf_pages": 5,
+  "public_pdf_all_pages_visually_inspected": true,
+  "public_pdf_sha256": "b2fe8c34658e0fa9f0a87a7ba37e892398d7bdbd146525dcbd33b4b327e8be80",
+  "human_peer_review": false,
+  "formal_verification_completed": false,
+  "lean_verification": "Separate ongoing conversation",
+  "priority": "Unestablished after bounded literature search",
+  "journal_or_arxiv_submission": false,
+  "scope": "Exactly three occupied sites, not an independent Bernoulli counterexample"
+}

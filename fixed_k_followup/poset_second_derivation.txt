@@ -1,0 +1,68 @@
+Second counting route for the fixed-three-site formula (2026-10-30)
+
+This re-expresses the problem using a general identity for an arbitrary
+monotone path P. It is a separately organized mathematical cross-check by
+the same AI, not an independent human or independent AI reviewer.
+
+Let P contain T=2n-1 free vertices and Q=W\P contain M-T free vertices.
+For z in Q let k_P(z) be the number of vertices of P comparable with z.
+Let X(P)=sum_{z in Q} binom(k_P(z),2): this counts all 3-chains with two
+vertices on P and one off P. Let Y(P) count all three-antichains having
+exactly one vertex on P. Then
+
+  C_P[3] = binom(T,3) + binom(T,2)*(M-T) - X(P) + Y(P).    (*)
+
+Proof: 3 on-path points are always optimal. With exactly 2 on-path, the
+path has score2 and fails precisely when the triple is a 3-chain. With
+exactly 1 on-path, the path is optimal exactly if the entire triple is
+an antichain. With none it cannot be optimal. Ties are included. The
+identity holds for every path and every grid size, independent of this
+specific family.
+
+Now put A=gamma_n, B=pi_n, and use the four local points a,b,c,d and
+their common path C as in the manuscript. The first two terms of (*)
+cancel between paths. Partition X(A)-X(B) by the two on-path points:
+
+* two common points and one off-path local point: A has off-path choices
+  c,d and B has a,b. Every local point is below every common point; all
+  these triples are chains, so both contributions are 2*binom(|C|,2).
+* one common and one local point, with the off-path point from the other
+  local pair: exchange the two local roles. Every chain triple then occurs
+  once on each side and cancels.
+* two local on-path points and one opposite-side local off-path point:
+  none of the four local triples is a 3-chain.
+* two local on-path points and z in D: the signed chain count is
+  N_ab-N_cd=1. Here the difference of upper comparability regions is
+  row (x,1), 2<=x<=n, minus column (0,y), 3<=y<=n.
+* one local and one common on-path point, with z in D: the signed number
+  of chains is sum_{h in C} 2(h_x-h_y+1)=2-2(n-3)^2. For fixed h,
+  the lower comparability region is empty in D and the upper region cancels.
+  The full-grid rectangle sum is 2h_x-2h_y+1; the excluded local points
+  contribute -1, while excluded common points contribute 0. Subtracting
+  exclusions yields 2(h_x-h_y+1).
+
+Hence X(A)-X(B)=3-2(n-3)^2.
+
+For Y(B)-Y(A), an antichain containing a common-path vertex contains
+no local vertex, since every common-path vertex dominates all four local
+vertices; its contribution therefore cancels. An antichain containing two
+local vertices can contain at most one from each local path pair, so both
+paths meet it and its contribution also cancels. A contributing antichain
+therefore consists of exactly one local vertex and two D vertices. The
+numbers of qualifying D-pairs for a,b,c,d are respectively
+  0, (n-2)(n-1), 0, binom(n-1,2).
+They follow by inspecting the one-column or two-row incomparable regions;
+the b region has one column and one row with (n-2)(n-1) cross pairs.
+Thus Y(B)-Y(A)=-binom(n-1,2).
+
+By (*), the resulting total is
+  C_B[3]-C_A[3] = 3-2(n-3)^2-binom(n-1,2)
+                 = -(5n²-27n+32)/2.
+Since 5n²-27n+32=(n-4)(5n-7)+4>0 for n>=4, this proves negativity.
+
+Executable independent implementation: check_poset_identity.py computes
+the generic X(P), Y(P), and C_P[3] from the actual path vertices and
+coordinate comparabilities for n=4,...,11, matching the formulas and both
+previous enumeration programs. The formula is established by the symbolic
+argument above, not by the finite checks. Exact priority remains unknown;
+the result is not a counterexample for independent Bernoulli weights.

@@ -1,0 +1,136 @@
+{
+  "method": "generic path identity C3=choose(T,3)+choose(T,2)*(m-T)-X+Y",
+  "scope": "Independent finite evaluation n=4,...,11; analytic explanation in poset_second_derivation.txt",
+  "results": [
+    {
+      "n": 4,
+      "gamma": {
+        "X": 125,
+        "Y": 63,
+        "C3": 309
+      },
+      "pi": {
+        "X": 124,
+        "Y": 60,
+        "C3": 307
+      },
+      "X_gamma_minus_X_pi": 1,
+      "Y_pi_minus_Y_gamma": -3,
+      "delta": -2
+    },
+    {
+      "n": 5,
+      "gamma": {
+        "X": 336,
+        "Y": 216,
+        "C3": 864
+      },
+      "pi": {
+        "X": 341,
+        "Y": 210,
+        "C3": 853
+      },
+      "X_gamma_minus_X_pi": -5,
+      "Y_pi_minus_Y_gamma": -6,
+      "delta": -11
+    },
+    {
+      "n": 6,
+      "gamma": {
+        "X": 730,
+        "Y": 595,
+        "C3": 2010
+      },
+      "pi": {
+        "X": 745,
+        "Y": 585,
+        "C3": 1985
+      },
+      "X_gamma_minus_X_pi": -15,
+      "Y_pi_minus_Y_gamma": -10,
+      "delta": -25
+    },
+    {
+      "n": 7,
+      "gamma": {
+        "X": 1387,
+        "Y": 1401,
+        "C3": 4122
+      },
+      "pi": {
+        "X": 1416,
+        "Y": 1386,
+        "C3": 4078
+      },
+      "X_gamma_minus_X_pi": -29,
+      "Y_pi_minus_Y_gamma": -15,
+      "delta": -44
+    },
+    {
+      "n": 8,
+      "gamma": {
+        "X": 2401,
+        "Y": 2933,
+        "C3": 7707
+      },
+      "pi": {
+        "X": 2448,
+        "Y": 2912,
+        "C3": 7639
+      },
+      "X_gamma_minus_X_pi": -47,
+      "Y_pi_minus_Y_gamma": -21,
+      "delta": -68
+    },
+    {
+      "n": 9,
+      "gamma": {
+        "X": 3880,
+        "Y": 5608,
+        "C3": 13424
+      },
+      "pi": {
+        "X": 3949,
+        "Y": 5580,
+        "C3": 13327
+      },
+      "X_gamma_minus_X_pi": -69,
+      "Y_pi_minus_Y_gamma": -28,
+      "delta": -97
+    },
+    {
+      "n": 10,
+      "gamma": {
+        "X": 5946,
+        "Y": 9981,
+        "C3": 22104
+      },
+      "pi": {
+        "X": 6041,
+        "Y": 9945,
+        "C3": 21973
+      },
+      "X_gamma_minus_X_pi": -95,
+      "Y_pi_minus_Y_gamma": -36,
+      "delta": -131
+    },
+    {
+      "n": 11,
+      "gamma": {
+        "X": 8735,
+        "Y": 16765,
+        "C3": 34770
+      },
+      "pi": {
+        "X": 8860,
+        "Y": 16720,
+        "C3": 34600
+      },
+      "X_gamma_minus_X_pi": -125,
+      "Y_pi_minus_Y_gamma": -45,
+      "delta": -170
+    }
+  ],
+  "cpu_seconds": 0.03125,
+  "script_sha256": "5d2e9f3755e2c76fb9e2dc36c5f32a474ec649e8fbed1043cc07b1193bfc41f5"
+}
